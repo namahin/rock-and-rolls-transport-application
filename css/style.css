@@ -4,3 +4,13 @@
     outline: 0;
     font-family: 'Poppins', sans-serif;
 }
+
+root{
+    --body-bg-color: #F9F9F9;
+    --text-color: #282828;
+    --text-color-active: #22C38F;
+    --text-color-inactive: #CA2B1D;
+    --text-color-sidebar: #ffffff;
+    --text-color-sidebar-active: #DC0000;
+    --table-border-color: #0000000d;
+}

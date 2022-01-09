@@ -427,6 +427,7 @@ h3.table-title {
 .td-status span.status-active {
     background-color: #22C38F;
 }
+
 .td-status span.status-inactive {
     background-color: var(--text-color-inactive);
 }
@@ -482,6 +483,12 @@ h3.table-title {
 .dt-pagination ul li:last-child a:hover {
     color: var(--text-color-white);
     background-color: var(--text-color-inactive);
+}
+
+.dt-pagination ul li:first-child a.active,
+.dt-pagination ul li:last-child a.active {
+    background-color: var(--text-color-inactive);
+    color: var(--text-color-white);
 }
 
 .dt-pagination ul li:first-child {

@@ -3,6 +3,8 @@
     margin: 0;
     outline: 0;
     font-family: 'Poppins', sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: #878787 #ffffff;
 }
 
 /* TT Commons font regular */
@@ -26,6 +28,8 @@
     --bg-color-inactive: #ca2b1d1a;
     --bg-color-dark: #181818;
     --bg-color-sidebar-active: #db00001a;
+    --bg-btn-theme: #CA2B1D;
+    --bg-btn-theme-inactive: #CA2B1D1A;
     --text-color: #282828;
     --text-color-black: #000000;
     --text-color-active: #22C38F;
@@ -59,6 +63,29 @@
     color: #878787;
 }
 
+/* ===== Scrollbar CSS ===== */
+*::-webkit-scrollbar {
+    width: 15px;
+    background: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #87878780;
+    border-radius: 10px;
+    transition: linear;
+    border: 4px solid #ffffff;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #878787;
+}
+
 html,
 body {
     background-color: var(--bg-color-light);
@@ -78,9 +105,16 @@ a {
     border-radius: 0;
     border: none;
     padding: 7px 18px;
-    ;
 }
 
+.modal-backdrop {
+    background-color: #000000d4;
+}
+.modal-backdrop.show{
+    opacity: 1;
+}
+
+/*  */
 .page-wrapper {
     display: flex;
     flex-wrap: nowrap;
@@ -304,7 +338,7 @@ a {
     font-size: 19px;
     line-height: 19px;
     color: var(--text-color-black);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .page-area header .user-summery .user-id p {
@@ -577,4 +611,206 @@ h3.table-title {
 .td-status-intakes span.status-received {
     color: var(--status-color-received);
     background-color: var(--status-bg-color-received);
+}
+
+/* theme modal css */
+.theme-modal-area {
+    max-width: 401px;
+}
+
+.theme-modal {
+    border: none;
+    border-radius: 10px;
+}
+
+.theme-modal .modal-body {
+    padding: 25px 20px 18px 20px;
+}
+
+.theme-modal .modal-body h3.modal-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--text-color-black);
+    margin-bottom: 26px;
+}
+
+.theme-modal .modal-body form {}
+
+.field-group {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 50% 50%;
+}
+
+.input-field {
+    margin-bottom: 20px;
+}
+
+.field-group .input-field {}
+
+.input-field label {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    margin-bottom: 8px;
+    color: #000000b3;
+}
+
+.input-field input[type=text] {
+    background: var(--bg-color-white);
+    border: 1px solid #00000026;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 15px 18px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--text-color-black);
+    width: 100%;
+}
+
+.input-field p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--text-color-black);
+    margin-bottom: 12px;
+}
+
+.input-field-radio label {
+    margin-right: 20px;
+}
+
+.input-field-radio label input[type=radio]::after {
+    content: "";
+    width: 19px;
+    height: 19px;
+    background: var(--bg-color-white);
+    border: 1px solid var(--text-color-inactive);
+    box-sizing: border-box;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    top: -2px;
+    transition: linear .2s;
+}
+
+.input-field-radio label input[type=radio]:checked::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: var(--text-color-inactive);
+    border: 4px solid var(--text-color-white);
+    box-shadow: 0 0 0 1px var(--text-color-inactive);
+    box-sizing: border-box;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    top: -2px;
+    transition: linear .2s;
+}
+
+.input-field-radio label span {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #000000b3;
+    margin-left: 14px;
+    position: relative;
+    top: -2px;
+}
+
+.modal-body form button,
+.modal-body form a {
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-color-white);
+    padding: 13px;
+    background-color: var(--bg-btn-theme);
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.modal-body form button:last-child,
+.modal-body form a:last-child {
+    margin-bottom: 0;
+    background-color: var(--bg-btn-theme-inactive);
+    color: var(--text-color-inactive);
+}
+
+.alert-modal-area {
+    width: 331px;
+}
+
+.alert-modal-area .alert-modal {
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+}
+
+.alert-modal .modal-body {
+    padding: 20px;
+    padding-bottom: 26px;
+}
+
+.alert-modal .modal-body img {
+    margin-bottom: 11px;
+    width: 79px;
+}
+
+.alert-modal .modal-body p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #292d32b3;
+    margin: 0;
+}
+
+.alert-modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 26px 0;
+}
+
+.alert-modal-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.alert-modal-footer ul li {
+    display: inline-block;
+    width: 68px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+.alert-modal-footer ul li:last-child {
+    margin-right: 0;
+}
+
+.alert-modal-footer ul li a,
+.alert-modal-footer ul li button {
+    border: 1px solid #00000033;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #CCCCCC;
+    line-height: 22px;
+    padding: 8px;
+    display: block;
+}
+
+.alert-modal-footer ul li a.active,
+.alert-modal-footer ul li button.active {
+    border-color: var(--text-color-inactive);
+    background-color: var(--text-color-inactive);
+    color: var(--text-color-white);
 }

@@ -9,15 +9,26 @@
     --bg-color-light: #F9F9F9;
     --bg-color-white: #FFFFFF;
     --bg-color-inactive: #ca2b1d1a;
+    --bg-color-dark: #181818;
+    --bg-color-sidebar-active: #db00001a;
     --text-color: #282828;
     --text-color-black: #000000;
     --text-color-active: #22C38F;
     --text-color-inactive: #CA2B1D;
     --text-color-white: #ffffff;
     --text-color-white-active: #DC0000;
-    --bg-color-sidebar-active: #db00001a;
     --table-border-color: #0000000d;
-    --bg-color-dark: #181818;
+    --status-color-new: #0BAC78;
+    --status-color-pending: #F59C26;
+    --status-color-repair: #CA2B1D;
+    --status-color-delivered: #5D5FEF;
+    --status-color-received: #0BAC78;
+    --status-bg-color-new: #22C38F1A;
+    --status-bg-color-pending: #FEFBE7;
+    --status-bg-color-repair: #CA2B1D1A;
+    --status-bg-color-delivered: #5D5FEF1A;
+    --status-bg-color-received: #0BAC781A;
+
 }
 
 ::placeholder {
@@ -307,12 +318,15 @@ h3.table-title {
 
 .ud-table table {
     width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .ud-table table thead {
     background: var(--bg-color-white);
     box-shadow: 0px 10px 14px #afc1cb1f;
-    border-radius: 10px 10px 0px 0px;
+    position: relative;
+    z-index: 1;
 }
 
 .ud-table table thead tr {}
@@ -341,6 +355,12 @@ h3.table-title {
 
 .ud-table table tbody tr {
     border-bottom: 1px solid #0000000d;
+    background-color: var(--bg-color-white);
+    transition: linear .2s;
+}
+
+.ud-table table tbody tr:hover {
+    background-color: #FBFBFB;
 }
 
 .ud-table table tbody tr:last-child {
@@ -499,4 +519,41 @@ h3.table-title {
 .dt-pagination ul li:last-child {
     margin-left: 35px;
     margin-right: 0;
+}
+
+.td-status-intakes span {
+    width: 90px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    display: inline-block;
+}
+
+.td-status-intakes span.status-new {
+    color: var(--status-color-new);
+    background-color: var(--status-bg-color-new);
+}
+
+.td-status-intakes span.status-pending {
+    color: var(--status-color-pending);
+    background-color: var(--status-bg-color-pending);
+}
+
+.td-status-intakes span.status-repair {
+    color: var(--status-color-repair);
+    background-color: var(--status-bg-color-repair);
+}
+
+.td-status-intakes span.status-delivered {
+    color: var(--status-color-delivered);
+    background-color: var(--status-bg-color-delivered);
+}
+
+.td-status-intakes span.status-received {
+    color: var(--status-color-received);
+    background-color: var(--status-bg-color-received);
 }

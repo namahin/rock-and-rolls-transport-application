@@ -5,7 +5,22 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* TT Commons font regular */
+@font-face {
+    font-family: 'TT Commons';
+    font-weight: 400;
+    src: url('../fonts/TT-Commons-Regular.otf') format('otf');
+}
+
+/* TT Commons font Medium */
+@font-face {
+    font-family: 'TT Commons';
+    font-weight: 500;
+    src: url('../fonts/TT-Commons-Medium.otf') format('otf');
+}
+
 :root {
+    --font-tt-commons: "TT Commons", sans-serif;
     --bg-color-light: #F9F9F9;
     --bg-color-white: #FFFFFF;
     --bg-color-inactive: #ca2b1d1a;
@@ -74,6 +89,10 @@ a {
 
 .side-bar {
     width: 235px;
+    background-image: url(../images/side-bar-bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
     background-color: var(--bg-color-dark);
     position: fixed;
     left: 0;
@@ -280,6 +299,7 @@ a {
 }
 
 .page-area header .user-summery .user-id h3 {
+    font-family: var(--font-tt-commons);
     font-weight: 500;
     font-size: 19px;
     line-height: 19px;
@@ -288,6 +308,7 @@ a {
 }
 
 .page-area header .user-summery .user-id p {
+    font-family: var(--font-tt-commons);
     font-weight: 400;
     font-size: 13px;
     line-height: 13px;

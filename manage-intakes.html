@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock & Rolls Transport Application</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
     <!-- Google Fonts 'Poppins' -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Bootstrap v5.1.3 CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Owl Carousel v2.3.4 CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Theme CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -654,7 +657,7 @@
                                             </div>
                                         </div>
                                         <div class="col-grid">
-                                            <div class="modal-input-field modal-input-field-checkbox">
+                                            <div class="modal-input-field checkbox-btn">
                                                 <label><img src="images/icon/user-square.svg" alt="">
                                                     <span>Tittle</span><input type="checkbox" checked>
                                                 </label>
@@ -700,49 +703,49 @@
                                             </div>
                                         </div>
                                         <div class="col-grid">
-                                            <div class="modal-input-field modal-input-field-checkbox">
+                                            <div class="modal-input-field checkbox-btn">
                                                 <label><img src="images/icon/user-square.svg" alt="">
                                                     <span>Bio</span><input type="checkbox" checked>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-grid">
-                                            <div class="modal-input-field modal-input-field-checkbox">
+                                            <div class="modal-input-field checkbox-btn">
                                                 <label><img src="images/icon/user-square.svg" alt="">
                                                     <span>Windshield Damage</span><input type="checkbox">
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-grid">
-                                            <div class="modal-input-field modal-input-field-checkbox">
+                                            <div class="modal-input-field checkbox-btn">
                                                 <label><img src="images/icon/user-square.svg" alt="">
                                                     <span>Front-end Damage</span><input type="checkbox" checked>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-grid">
-                                            <div class="modal-input-field modal-input-field-checkbox">
+                                            <div class="modal-input-field checkbox-btn">
                                                 <label><img src="images/icon/user-square.svg" alt="">
                                                     <span>Radiator Damage</span><input type="checkbox" checked>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-grid">
-                                            <div class="modal-input-field modal-input-field-checkbox">
+                                            <div class="modal-input-field checkbox-btn">
                                                 <label><img src="images/icon/user-square.svg" alt="">
                                                     <span>Mold</span><input type="checkbox">
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-grid">
-                                            <div class="modal-input-field modal-input-field-checkbox">
+                                            <div class="modal-input-field checkbox-btn">
                                                 <label><img src="images/icon/user-square.svg" alt="">
                                                     <span>Bent Axles or Tires </span><input type="checkbox" checked>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-grid">
-                                            <div class="modal-input-field modal-input-field-checkbox">
+                                            <div class="modal-input-field checkbox-btn">
                                                 <label><img src="images/icon/user-square.svg" alt="">
                                                     <span>Forklift Required</span><input type="checkbox">
                                                 </label>
@@ -752,6 +755,9 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 03 Status -->
+
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -764,10 +770,88 @@
                             <div id="flush-collapseThree" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingThree" data-bs-parent="#accordionCarDetails">
                                 <div class="accordion-body">
+                                    <div class="accordion-grid accordion-grid-100">
+                                        <div class="col-grid">
+                                            <div class="modal-input-field checkbox">
+                                                <label>
+                                                    <i class="status-unpaid"></i><span>Unpaid</span>
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-grid">
+                                            <div class="modal-input-field checkbox">
+                                                <label>
+                                                    <i class="status-no-title"></i><span>No Title</span>
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-grid">
+                                            <div class="modal-input-field checkbox">
+                                                <label>
+                                                    <i class="status-pending"></i><span>Pending DR</span>
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-grid">
+                                            <div class="modal-input-field checkbox">
+                                                <label>
+                                                    <i class="status-repair"></i><span>Repair</span>
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-grid">
+                                            <div class="modal-input-field checkbox">
+                                                <label>
+                                                    <i class="status-repair-quote"></i><span>Repair Quote</span>
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-grid">
+                                            <div class="modal-input-field checkbox">
+                                                <label>
+                                                    <i class="status-transit"></i><span>Transit</span>
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-grid">
+                                            <div class="modal-input-field checkbox">
+                                                <label>
+                                                    <i class="status-unreachable"></i><span>Unreachable</span>
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-grid">
+                                            <div class="modal-input-field checkbox">
+                                                <label>
+                                                    <i class="status-complete"></i><span>Complete</span>
+                                                    <input type="checkbox" checked>
+                                                </label>
+                                            </div>
 
+                                            <!-- image drag-drop placeholder -->
+                                            <div class="img-placeholder">
+                                                <input id="placeholder" type="file" hidden multiple>
+                                                <label for="placeholder">
+                                                    <img src="images/Image.svg" alt="">
+                                                    <h4>Drop your image here, or <span>browse</span></h4>
+                                                    <p>Suppots : JPG, PNG, JPEG20 & others</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 04 Photos -->
+
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -780,10 +864,50 @@
                             <div id="flush-collapseFour" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingFour" data-bs-parent="#accordionCarDetails">
                                 <div class="accordion-body">
+                                    <div class="accordion-grid accordion-grid-100">
+                                        <div class="col-grid">
+                                            <div class="img-placeholder img-placeholder-expand">
+                                                <input id="placeholder" type="file" hidden multiple>
+                                                <label for="placeholder">
+                                                    <img src="images/Image.svg" alt="">
+                                                    <h4>Drop your image here, or <span>browse</span></h4>
+                                                    <p>Suppots : JPG, PNG, JPEG20 & others</p>
+                                                    <div class="uploading-progress">
+                                                        <div class="text">Uploading...</div>
+                                                        <div class="progress-bar"><span></span></div>
+                                                        <div class="controller">
+                                                            <button><img src="images/icon/pause.svg" alt=""></button>
+                                                            <button><img src="images/icon/cancel.svg" alt=""></button>
+                                                        </div>
+                                                    </div>
+                                                </label>
 
+                                                <!-- Uploaded image slider -->
+                                                <div class="ui-slider">
+                                                    <div class="owl-carousel owl-theme">
+                                                        <div style="background-image: url(images/slider-img.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/slider-img.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/doc.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/pdf.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/slider-img.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/slider-img.png);"
+                                                            class="item"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 05 Ownership Documents -->
+
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -796,10 +920,50 @@
                             <div id="flush-collapseFive" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingFive" data-bs-parent="#accordionCarDetails">
                                 <div class="accordion-body">
+                                    <div class="accordion-grid accordion-grid-100">
+                                        <div class="col-grid">
+                                            <div class="img-placeholder img-placeholder-expand">
+                                                <input id="placeholder" type="file" hidden multiple>
+                                                <label for="placeholder">
+                                                    <img src="images/Image.svg" alt="">
+                                                    <h4>Drop your image here, or <span>browse</span></h4>
+                                                    <p>Suppots : JPG, PNG, JPEG20 & others</p>
+                                                    <div class="uploading-progress">
+                                                        <div class="text">Uploading...</div>
+                                                        <div class="progress-bar"><span></span></div>
+                                                        <div class="controller">
+                                                            <button><img src="images/icon/pause.svg" alt=""></button>
+                                                            <button><img src="images/icon/cancel.svg" alt=""></button>
+                                                        </div>
+                                                    </div>
+                                                </label>
 
+                                                <!-- Uploaded image slider -->
+                                                <div class="ui-slider">
+                                                    <div class="owl-carousel owl-theme">
+                                                        <div style="background-image: url(images/slider-img.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/slider-img.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/doc.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/pdf.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/slider-img.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/slider-img.png);"
+                                                            class="item"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 06 Proof of Delivery -->
+
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingSix">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -812,10 +976,50 @@
                             <div id="flush-collapseSix" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingSix" data-bs-parent="#accordionCarDetails">
                                 <div class="accordion-body">
+                                    <div class="accordion-grid accordion-grid-100">
+                                        <div class="col-grid">
+                                            <div class="img-placeholder img-placeholder-expand">
+                                                <input id="placeholder" type="file" hidden multiple>
+                                                <label for="placeholder">
+                                                    <img src="images/Image.svg" alt="">
+                                                    <h4>Drop your image here, or <span>browse</span></h4>
+                                                    <p>Suppots : JPG, PNG, JPEG20 & others</p>
+                                                    <div class="uploading-progress">
+                                                        <div class="text">Uploading...</div>
+                                                        <div class="progress-bar"><span></span></div>
+                                                        <div class="controller">
+                                                            <button><img src="images/icon/pause.svg" alt=""></button>
+                                                            <button><img src="images/icon/cancel.svg" alt=""></button>
+                                                        </div>
+                                                    </div>
+                                                </label>
 
+                                                <!-- Uploaded image slider -->
+                                                <div class="ui-slider">
+                                                    <div class="owl-carousel owl-theme">
+                                                        <div style="background-image: url(images/slider-img.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/slider-img.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/doc.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/pdf.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/slider-img.png);"
+                                                            class="item"></div>
+                                                        <div style="background-image: url(images/slider-img.png);"
+                                                            class="item"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 07 Miscellaneous Documents -->
+
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingSeven">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -828,10 +1032,24 @@
                             <div id="flush-collapseSeven" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingSeven" data-bs-parent="#accordionCarDetails">
                                 <div class="accordion-body">
-
+                                    <div class="accordion-grid accordion-grid-100">
+                                        <div class="col-grid">
+                                            <div class="img-placeholder img-placeholder-expand">
+                                                <input id="placeholder" type="file" hidden multiple>
+                                                <label for="placeholder">
+                                                    <img src="images/Image.svg" alt="">
+                                                    <h4>Drop your image here, or <span>browse</span></h4>
+                                                    <p>Suppots : JPG, PNG, JPEG20 & others</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 08 Miscellaneous Notes -->
+
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingEight">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -844,7 +1062,11 @@
                             <div id="flush-collapseEight" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingEight" data-bs-parent="#accordionCarDetails">
                                 <div class="accordion-body">
+                                    <div class="accordion-grid accordion-grid-100">
+                                        <div class="col-grid">
 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -859,6 +1081,7 @@
     <!-- script -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 

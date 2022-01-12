@@ -23,19 +23,16 @@
 
 :root {
     --font-tt-commons: "TT Commons", sans-serif;
+    --color-primary: #CA2B1D;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
     --bg-color-light: #F9F9F9;
-    --bg-color-white: #FFFFFF;
     --bg-color-inactive: #ca2b1d1a;
     --bg-color-dark: #181818;
     --bg-color-sidebar-active: #db00001a;
-    --bg-btn-theme: #CA2B1D;
     --bg-btn-theme-inactive: #CA2B1D1A;
     --text-color: #282828;
-    --text-color-black: #000000;
-    --text-color-active: #22C38F;
-    --text-color-inactive: #CA2B1D;
-    --text-color-white: #ffffff;
-    --text-color-white-active: #DC0000;
+    --color-white-active: #DC0000;
     --table-border-color: #0000000d;
 
     /* status color var */
@@ -111,11 +108,12 @@ a {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    color: var(--text-color-white);
-    background-color: var(--text-color-inactive);
+    color: var(--color-white);
+    background-color: var(--color-primary);
     border-radius: 0;
     border: none;
     padding: 7px 18px;
+    border-radius: 2px;
 }
 
 .modal-backdrop {
@@ -211,7 +209,7 @@ a {
     display: block;
     font-size: 14px;
     line-height: 21px;
-    color: var(--text-color-white);
+    color: var(--color-white);
     padding: 10px;
     padding-right: 0;
     border-radius: 3px 0 0 3px;
@@ -220,7 +218,7 @@ a {
 
 .side-bar-menu ul li a.active,
 .side-bar-menu ul li a:hover {
-    color: var(--text-color-white-active);
+    color: var(--color-white-active);
     background-color: var(--bg-color-sidebar-active);
 }
 
@@ -229,7 +227,7 @@ a {
     position: absolute;
     width: 2px;
     height: 28px;
-    background-color: var(--text-color-white-active);
+    background-color: var(--color-white-active);
     border-radius: 3px 0 0 3px;
     right: 0;
     top: 50%;
@@ -241,7 +239,7 @@ a {
 }
 
 .side-bar-menu ul li a span.menu-icon svg path {
-    stroke: var(--text-color-white);
+    stroke: var(--color-white);
     stroke-width: 1px;
     transition: linear .2s;
 }
@@ -254,14 +252,14 @@ a {
 }
 
 .side-bar-menu ul li a span.menu-arrow svg path {
-    stroke: var(--text-color-white);
+    stroke: var(--color-white);
 }
 
 .side-bar-menu ul li a.active span.menu-icon svg path,
 .side-bar-menu ul li a.active span.menu-arrow svg path,
 .side-bar-menu ul li a:hover span.menu-icon svg path,
 .side-bar-menu ul li a:hover span.menu-arrow svg path {
-    stroke: var(--text-color-white-active);
+    stroke: var(--color-white-active);
 }
 
 
@@ -305,7 +303,7 @@ a {
     width: 285px;
     height: 50px;
     border-radius: 6px;
-    background-color: var(--bg-color-white);
+    background-color: var(--color-white);
     color: var(--text-color);
     font-size: 14px;
     line-height: 16px;
@@ -323,7 +321,7 @@ a {
 }
 
 .page-area header .user-summery .user-img img {
-    border: 2px solid var(--bg-color-white);
+    border: 2px solid var(--color-white);
     border-radius: 4px;
     width: 50px;
 }
@@ -337,7 +335,7 @@ a {
     font-weight: 500;
     font-size: 19px;
     line-height: 19px;
-    color: var(--text-color-black);
+    color: var(--color-black);
     margin-bottom: 5px;
 }
 
@@ -356,7 +354,7 @@ a {
 }
 
 .ud-table-area {
-    background-color: var(--bg-color-white);
+    background-color: var(--color-white);
     border-radius: 10px;
     margin-bottom: 22px;
 }
@@ -376,7 +374,7 @@ h3.table-title {
 }
 
 .ud-table table thead {
-    background: var(--bg-color-white);
+    background: var(--color-white);
     box-shadow: 0px 10px 14px #afc1cb1f;
     position: relative;
     z-index: 1;
@@ -402,7 +400,7 @@ h3.table-title {
 
 .ud-table table tbody tr {
     border-bottom: 1px solid #0000000d;
-    background-color: var(--bg-color-white);
+    background-color: var(--color-white);
     transition: linear .2s;
 }
 
@@ -494,7 +492,7 @@ h3.table-title {
 }
 
 .td-status span.status-inactive {
-    background-color: var(--text-color-inactive);
+    background-color: var(--color-primary);
 }
 
 /* data tabe pagination css */
@@ -522,38 +520,38 @@ h3.table-title {
 .dt-pagination ul li a {
     display: block;
     width: 100%;
-    background: var(--bg-color-white);
+    background: var(--color-white);
     border-radius: 2px;
     font-size: 14px;
     line-height: 35px;
     font-weight: 500;
     text-align: center;
-    color: var(--text-color-black);
+    color: var(--color-black);
 }
 
 .dt-pagination ul li a:hover,
 .dt-pagination ul li a.active {
-    color: var(--text-color-inactive);
+    color: var(--color-primary);
     background-color: var(--bg-color-inactive);
 }
 
 .dt-pagination ul li:first-child a,
 .dt-pagination ul li:last-child a {
-    color: var(--text-color-inactive);
+    color: var(--color-primary);
     background-color: var(--bg-color-inactive);
     padding: 0 21px;
 }
 
 .dt-pagination ul li:first-child a:hover,
 .dt-pagination ul li:last-child a:hover {
-    color: var(--text-color-white);
-    background-color: var(--text-color-inactive);
+    color: var(--color-white);
+    background-color: var(--color-primary);
 }
 
 .dt-pagination ul li:first-child a.active,
 .dt-pagination ul li:last-child a.active {
-    background-color: var(--text-color-inactive);
-    color: var(--text-color-white);
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .dt-pagination ul li:first-child {
@@ -645,7 +643,7 @@ h3.table-title {
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
-    color: var(--text-color-black);
+    color: var(--color-black);
     margin-bottom: 26px;
 }
 
@@ -668,7 +666,7 @@ h3.table-title {
 }
 
 .input-field input[type=text] {
-    background: var(--bg-color-white);
+    background: var(--color-white);
     border: 1px solid #00000026;
     box-sizing: border-box;
     border-radius: 5px;
@@ -676,7 +674,7 @@ h3.table-title {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    color: var(--text-color-black);
+    color: var(--color-black);
     width: 100%;
 }
 
@@ -684,7 +682,7 @@ h3.table-title {
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
-    color: var(--text-color-black);
+    color: var(--color-black);
     margin-bottom: 12px;
 }
 
@@ -696,8 +694,8 @@ h3.table-title {
     content: "";
     width: 19px;
     height: 19px;
-    background: var(--bg-color-white);
-    border: 1px solid var(--text-color-inactive);
+    background: var(--color-white);
+    border: 1px solid var(--color-primary);
     box-sizing: border-box;
     display: block;
     border-radius: 10px;
@@ -710,9 +708,9 @@ h3.table-title {
     content: "";
     width: 18px;
     height: 18px;
-    background: var(--text-color-inactive);
-    border: 4px solid var(--text-color-white);
-    box-shadow: 0 0 0 1px var(--text-color-inactive);
+    background: var(--color-primary);
+    border: 4px solid var(--color-white);
+    box-shadow: 0 0 0 1px var(--color-primary);
     box-sizing: border-box;
     display: block;
     border-radius: 10px;
@@ -739,9 +737,9 @@ h3.table-title {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: var(--text-color-white);
+    color: var(--color-white);
     padding: 13px;
-    background-color: var(--bg-btn-theme);
+    background-color: var(--color-primary);
     display: block;
     width: 100%;
     margin-bottom: 15px;
@@ -751,7 +749,7 @@ h3.table-title {
 .modal-body form a:last-child {
     margin-bottom: 0;
     background-color: var(--bg-btn-theme-inactive);
-    color: var(--text-color-inactive);
+    color: var(--color-primary);
 }
 
 .alert-modal-area {
@@ -820,9 +818,9 @@ h3.table-title {
 
 .alert-modal-footer ul li a.active,
 .alert-modal-footer ul li button.active {
-    border-color: var(--text-color-inactive);
-    background-color: var(--text-color-inactive);
-    color: var(--text-color-white);
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 /* Driver Details Modal CSS */
@@ -846,7 +844,7 @@ h3.table-title {
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
-    color: var(--text-color-black);
+    color: var(--color-black);
 }
 
 .driver-details-modal .td-status-intakes {
@@ -866,7 +864,7 @@ h3.table-title {
 }
 
 .driver-details-modal .modal-header button svg {
-    fill: var(--text-color-inactive);
+    fill: var(--color-primary);
 }
 
 .driver-details-modal .modal-body {
@@ -897,7 +895,7 @@ h3.table-title {
 }
 
 .driver-details-modal .modal-body .modal-sec .modal-sec-grid .col-grid {
-    background: var(--bg-color-white);
+    background: var(--color-white);
     border-radius: 5px;
     transition: linear .2s;
 }
@@ -926,7 +924,7 @@ h3.table-title {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 12px;
-    color: var(--text-color-black);
+    color: var(--color-black);
     opacity: .7;
 }
 
@@ -935,7 +933,7 @@ h3.table-title {
     font-weight: 400;
     font-size: 12px;
     line-height: 12px;
-    color: var(--text-color-black);
+    color: var(--color-black);
     opacity: .7;
 }
 
@@ -995,8 +993,8 @@ h3.table-title {
 
 .driver-details-modal .modal-body .modal-sec.modal-sec-notes .text {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 23px;
+    font-size: 14px;
+    line-height: 26px;
     color: #292D32;
     opacity: 0.7;
     padding: 7px 15px 17px;
@@ -1113,9 +1111,9 @@ h3.table-title {
     content: "";
     width: 15px;
     height: 15px;
-    background: var(--text-color-inactive);
-    border: 4px solid var(--text-color-white);
-    box-shadow: 0 0 0 1px var(--text-color-inactive);
+    background: var(--color-primary);
+    border: 4px solid var(--color-white);
+    box-shadow: 0 0 0 1px var(--color-primary);
     box-sizing: border-box;
     display: block;
     border-radius: 10px;
@@ -1175,7 +1173,7 @@ h3.table-title {
 }
 
 .driver-details-modal .status-list li label input[type=radio]:checked+span {
-    color: var(--text-color-inactive);
+    color: var(--color-primary);
 }
 
 .driver-details-modal .status-list li label .staus-complete[type=radio]:checked+span {
@@ -1265,8 +1263,8 @@ ul.edit-modal-btngroup {
 
 ul.edit-modal-btngroup li button.active,
 ul.edit-modal-btngroup li a.active {
-    color: var(--text-color-white);
-    background-color: var(--bg-btn-theme);
+    color: var(--color-white);
+    background-color: var(--color-primary);
 }
 
 /* Edit car details modal CSS */
@@ -1297,7 +1295,7 @@ ul.edit-modal-btngroup li a.active {
     left: 50%;
     transform: translate(-50%, 0);
     padding-bottom: 30px;
-    background-color: var(--bg-color-white);
+    background-color: var(--color-white);
     border-radius: 50%;
     padding-top: 10px;
     text-align: center;
@@ -1380,7 +1378,7 @@ ul.edit-modal-btngroup li a.active {
     height: 40px;
     background-color: #F8F8F8;
     border-radius: 5px;
-    color: var(--text-color-black);
+    color: var(--color-black);
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
@@ -1392,7 +1390,7 @@ ul.edit-modal-btngroup li a.active {
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    color: var(--text-color-black);
+    color: var(--color-black);
     transition: linear .2s;
     background-color: transparent;
 }
@@ -1463,7 +1461,7 @@ ul.edit-modal-btngroup li a.active {
     background-color: #c4c4c433;
     border-radius: 2px;
     font-size: 13px;
-    color: var(--text-color-black);
+    color: var(--color-black);
     width: 50px;
     text-align: center;
     height: 25px;
@@ -1471,14 +1469,14 @@ ul.edit-modal-btngroup li a.active {
 
 .accordion-grid .col-grid .modal-input-field.modal-input-field-select select option {}
 
-.accordion-grid .col-grid .modal-input-field label input[type=checkbox] {
+.accordion-grid .col-grid .modal-input-field.checkbox-btn label input[type=checkbox] {
     position: absolute;
     right: 7px;
     top: 50%;
     transform: translate(0, -50%);
 }
 
-.accordion-grid .col-grid .modal-input-field label input[type=checkbox]::after {
+.accordion-grid .col-grid .modal-input-field.checkbox-btn label input[type=checkbox]::after {
     content: "No";
     height: 23px;
     width: 35px;
@@ -1488,7 +1486,7 @@ ul.edit-modal-btngroup li a.active {
     font-weight: 400;
     font-size: 10px;
     line-height: 15px;
-    color: var(--text-color-white);
+    color: var(--color-white);
     position: absolute;
     right: 0;
     top: 50%;
@@ -1496,7 +1494,7 @@ ul.edit-modal-btngroup li a.active {
     padding: 3px 9px;
 }
 
-.accordion-grid .col-grid .modal-input-field label input[type=checkbox]::before {
+.accordion-grid .col-grid .modal-input-field.checkbox-btn label input[type=checkbox]::before {
     content: "Yes";
     border-radius: 2px;
     height: 23px;
@@ -1514,7 +1512,7 @@ ul.edit-modal-btngroup li a.active {
     padding: 3px 7px;
 }
 
-.accordion-grid .col-grid .modal-input-field label input[type=checkbox]:checked::after {
+.accordion-grid .col-grid .modal-input-field.checkbox-btn label input[type=checkbox]:checked::after {
     content: "No";
     border-radius: 2px;
     color: #00000080;
@@ -1522,12 +1520,12 @@ ul.edit-modal-btngroup li a.active {
     padding: 3px 9px;
 }
 
-.accordion-grid .col-grid .modal-input-field label input[type=checkbox]:checked::before {
+.accordion-grid .col-grid .modal-input-field.checkbox-btn label input[type=checkbox]:checked::before {
     content: "Yes";
     background: #CA2B1D;
     border: 1px solid #F3F3F3;
     border-radius: 2px;
-    color: var(--text-color-white);
+    color: var(--color-white);
     padding: 3px 7px;
 }
 
@@ -1541,4 +1539,259 @@ ul.edit-modal-btngroup li a.active {
     padding: 12px 15px;
     padding-left: 39px;
     display: block;
+}
+
+.accordion-grid .col-grid .modal-input-field.checkbox {}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label {}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label i {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    display: inline-block;
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label i.status-unpaid {
+    background-color: var(--status-color-unpaid);
+}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label i.status-no-title {
+    background-color: var(--status-color-no-title);
+}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label i.status-pending {
+    background-color: var(--status-color-pending);
+}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label i.status-repair {
+    background-color: var(--status-color-repair);
+}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label i.status-repair-quote {
+    background-color: var(--status-color-repair-quote);
+}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label i.status-transit {
+    background-color: var(--status-color-transit);
+}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label i.status-unreachable {
+    background-color: var(--status-color-unreachable);
+}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label i.status-complete {
+    background-color: var(--status-color-complete);
+}
+
+
+.accordion-grid .col-grid .modal-input-field.checkbox label input[type=checkbox] {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label input[type=checkbox]::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 20px;
+    width: 20px;
+    border: 1px solid #EBEBEB;
+    border-radius: 6px;
+    background-color: var(--color-white);
+    display: inline-block;
+}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label input[type=checkbox]:checked::after {
+    background-image: url(../images/check.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.accordion-grid .col-grid .modal-input-field.checkbox label span {
+    padding-left: 43px;
+}
+
+.img-placeholder {
+    border-top: 1px solid #0000000d;
+    margin: 10px 13px;
+    margin-top: 0;
+    padding-top: 13px;
+}
+
+.img-placeholder label {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px dashed #292d3233;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 8px;
+    padding-left: 42px;
+    position: relative;
+}
+
+.img-placeholder img {
+    width: 18px;
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translate(0, -50%);
+}
+
+.img-placeholder h4 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #292d32e6;
+    margin-bottom: 5px;
+}
+
+.img-placeholder h4 span {
+    color: var(--color-primary);
+}
+
+.img-placeholder p {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #292d3266;
+    margin-bottom: 13px;
+}
+
+.img-placeholder-expand {
+    margin: 0;
+    padding: 10px 13px;
+    border: none;
+}
+
+.img-placeholder-expand label {
+    padding: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.img-placeholder-expand label img {
+    position: unset;
+    width: 24px;
+    transform: unset;
+    margin-bottom: 9px;
+}
+
+.img-placeholder-expand label h4 {}
+
+.img-placeholder-expand label p {}
+
+.uploading-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.uploading-progress .text {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    color: #292d32e6;
+}
+
+.uploading-progress .progress-bar {
+    width: 153px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #CA2B1D1A;
+    display: block;
+    position: relative;
+}
+
+.uploading-progress .progress-bar span {
+    background-color: #CA2B1D;
+    width: 70px;
+    display: block;
+    height: 6px;
+    border-radius: 10px;
+}
+
+.uploading-progress .controller {
+    align-items: center;
+    display: flex;
+    column-gap: 5px;
+}
+
+.uploading-progress .controller button {
+    height: 22px;
+    width: 22px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #CA2B1D1A;
+    text-align: center;
+    position: relative;
+}
+
+.uploading-progress .controller button img {
+    height: 10px;
+    margin: 0;
+    width: unset;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ui-slider {
+    margin-top: 11px;
+}
+
+.ui-slider .owl-theme {}
+
+.ui-slider .owl-theme .item {
+    width: 53px;
+    height: 52px;
+    border: 1px solid #ECECEC;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.ui-slider-nav {}
+
+.ui-slider-nav button {
+    height: 18px;
+    width: 18px;
+    background-color: #00000024;
+    filter: blur(0.4px);
+    border-radius: 20px;
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.ui-slider-nav button.owl-next {
+    left: auto;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.ui-slider-nav button img {
+    width: 6px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
 }

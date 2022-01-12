@@ -1342,7 +1342,7 @@ ul.edit-modal-btngroup li a.active {
     height: 30px;
     width: 30px;
     border-radius: 20px;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 10px;
     line-height: 13px;
     color: #CA2B1D;
@@ -1375,28 +1375,35 @@ ul.edit-modal-btngroup li a.active {
     width: 26px;
 }
 
-.accordion.accordion-flush .accordion-item .accordion-header .accordion-button .title {
+.accordion.accordion-flush .accordion-item .accordion-header .accordion-button.collapsed .title {
     width: 100%;
     height: 40px;
     background-color: #F8F8F8;
     border-radius: 5px;
     color: var(--text-color-black);
     font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    padding: 11px 15px;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 10px 15px;
 }
 
-.accordion.accordion-flush .accordion-item .accordion-header .accordion-button.collapsed {}
 
-.accordion.accordion-flush .accordion-item .accordion-header .accordion-button.collapsed .icon {}
-
-.accordion.accordion-flush .accordion-item .accordion-header .accordion-button.collapsed .title {}
+.accordion.accordion-flush .accordion-item .accordion-header .accordion-button .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text-color-black);
+    transition: linear .2s;
+    background-color: transparent;
+}
 
 .accordion.accordion-flush .accordion-body {
     padding: 20px 15px;
     background: #F8F8F8;
     border-radius: 13px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
 }
 
 .accordion-grid {
@@ -1436,8 +1443,8 @@ ul.edit-modal-btngroup li a.active {
 .accordion-grid .col-grid .modal-input-field label input[type=text] {
     width: 100%;
     font-weight: 400;
-    font-size: 10px;
-    line-height: 15px;
+    font-size: 12px;
+    line-height: 12px;
     color: #000000b3;
     border: none;
     padding: 12px 15px;
@@ -1445,13 +1452,28 @@ ul.edit-modal-btngroup li a.active {
     background-color: transparent;
 }
 
-.accordion-grid .col-grid .modal-input-field.modal-input-field-checkbox {}
+.accordion-grid .col-grid .modal-input-field.modal-input-field-select {}
+
+.accordion-grid .col-grid .modal-input-field.modal-input-field-select select {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: none;
+    background-color: #c4c4c433;
+    border-radius: 2px;
+    font-size: 13px;
+    color: var(--text-color-black);
+    width: 50px;
+    text-align: center;
+    height: 25px;
+}
+
+.accordion-grid .col-grid .modal-input-field.modal-input-field-select select option {}
 
 .accordion-grid .col-grid .modal-input-field label input[type=checkbox] {
-    height: 0;
-    width: 0;
     position: absolute;
-    right: 0;
+    right: 7px;
     top: 50%;
     transform: translate(0, -50%);
 }
@@ -1461,14 +1483,14 @@ ul.edit-modal-btngroup li a.active {
     height: 23px;
     width: 35px;
     background: #CA2B1D;
-    border: 1px solid #c4c4c433;
+    border: 1px solid #F3F3F3;
     border-radius: 2px;
     font-weight: 400;
     font-size: 10px;
     line-height: 15px;
     color: var(--text-color-white);
     position: absolute;
-    right: 7px;
+    right: 0;
     top: 50%;
     transform: translate(0, -50%);
     padding: 3px 9px;
@@ -1484,9 +1506,9 @@ ul.edit-modal-btngroup li a.active {
     font-size: 10px;
     line-height: 15px;
     color: #00000080;
-    background: #c4c4c433;
+    background: #F3F3F3;
     position: absolute;
-    right: 42px;
+    right: 35px;
     top: 50%;
     transform: translate(0, -50%);
     padding: 3px 7px;
@@ -1496,14 +1518,14 @@ ul.edit-modal-btngroup li a.active {
     content: "No";
     border-radius: 2px;
     color: #00000080;
-    background: #c4c4c433;
+    background: #F3F3F3;
     padding: 3px 9px;
 }
 
 .accordion-grid .col-grid .modal-input-field label input[type=checkbox]:checked::before {
     content: "Yes";
     background: #CA2B1D;
-    border: 1px solid #c4c4c433;
+    border: 1px solid #F3F3F3;
     border-radius: 2px;
     color: var(--text-color-white);
     padding: 3px 7px;
@@ -1512,8 +1534,8 @@ ul.edit-modal-btngroup li a.active {
 .accordion-grid .col-grid .modal-input-field label span {
     width: 100%;
     font-weight: 400;
-    font-size: 10px;
-    line-height: 15px;
+    font-size: 12px;
+    line-height: 18px;
     color: #000000b3;
     border: none;
     padding: 12px 15px;

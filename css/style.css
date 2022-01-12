@@ -593,15 +593,39 @@ h3.table-title {
     background-color: var(--status-bg-color-repair);
 }
 
-.td-status-intakes span.status-delivered {
+.td-status-intakes span.status-transit {
     color: var(--status-color-transit);
     background-color: var(--status-bg-color-transit);
 }
 
-.td-status-intakes span.status-received {
+.td-status-intakes span.status-complete {
     color: var(--status-color-complete);
     background-color: var(--status-bg-color-complete);
 }
+
+.td-status-intakes span.status-unpaid {
+    color: var(--status-color-unpaid);
+    background-color: var(--status-bg-color-unpaid);
+}
+
+.td-status-intakes span.status-no-title {
+    color: var(--status-color-no-title);
+    background-color: var(--status-bg-color-no-title);
+}
+
+.td-status-intakes span.status-repair-quote {
+    color: var(--status-color-repair-quote);
+    background-color: var(--status-bg-color-repair-quote);
+    width: auto;
+}
+
+.td-status-intakes span.status-unreachable {
+    color: var(--status-color-unreachable);
+    background-color: var(--status-bg-color-unreachable);
+    width: auto;
+}
+
+
 
 /* theme modal css */
 .theme-modal-area {
@@ -867,7 +891,7 @@ h3.table-title {
 
 .driver-details-modal .modal-body .modal-sec .modal-sec-grid {
     display: grid;
-    grid-template-columns: 49.1% 49.1%;
+    grid-template-columns: 48% 48%;
     grid-column-gap: 4%;
     grid-row-gap: 15px;
 }
@@ -1044,12 +1068,12 @@ h3.table-title {
     background-color: var(--status-color-no-title);
 }
 
-.driver-details-modal .modal-body .modal-sec.modal-sec-vehicle span.status-pending-dr {
+.driver-details-modal .modal-body .modal-sec.modal-sec-vehicle span.status-pending {
     color: var(--status-color-pending);
     background-color: var(--status-bg-color-pending);
 }
 
-.driver-details-modal .modal-body .modal-sec.modal-sec-vehicle span.status-pending-dr::before {
+.driver-details-modal .modal-body .modal-sec.modal-sec-vehicle span.status-pending::before {
     background-color: var(--status-color-pending);
 }
 
@@ -1115,7 +1139,7 @@ h3.table-title {
     box-shadow: 0 0 0 1px var(--status-color-no-title);
 }
 
-.driver-details-modal .status-list li label .staus-pending-dr[type=radio]:checked::after {
+.driver-details-modal .status-list li label .staus-pending[type=radio]:checked::after {
     background: var(--status-color-pending);
     box-shadow: 0 0 0 1px var(--status-color-pending);
 }
@@ -1166,7 +1190,7 @@ h3.table-title {
     color: var(--status-color-no-title);
 }
 
-.driver-details-modal .status-list li label .staus-pending-dr[type=radio]:checked+span {
+.driver-details-modal .status-list li label .staus-pending[type=radio]:checked+span {
     color: var(--status-color-pending);
 }
 
@@ -1187,6 +1211,7 @@ h3.table-title {
 }
 
 .driver-details-edit .modal-sec-grid {
+    grid-template-columns: 49.1% 49.1% !important;
     grid-gap: 1.8% !important;
 }
 
@@ -1242,4 +1267,256 @@ ul.edit-modal-btngroup li button.active,
 ul.edit-modal-btngroup li a.active {
     color: var(--text-color-white);
     background-color: var(--bg-btn-theme);
+}
+
+/* Edit car details modal CSS */
+.car-details-modal-area {
+    width: 424px;
+    min-height: auto;
+    max-height: calc(100% - 130px);
+    bottom: -60px;
+}
+
+.car-details-modal {
+    border-radius: 26px;
+    overflow: unset !important;
+}
+
+.car-details-modal .modal-header {
+    padding: 0;
+    height: 91px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: unset;
+    border: none;
+}
+
+.car-details-modal .modal-header .modal-logo {
+    width: 220px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding-bottom: 30px;
+    background-color: var(--bg-color-white);
+    border-radius: 50%;
+    padding-top: 10px;
+    text-align: center;
+    bottom: 0;
+}
+
+.car-details-modal .modal-header .modal-logo img {
+    width: 104px;
+}
+
+.car-details-modal .modal-body {
+    padding: 25px;
+}
+
+.accordion.accordion-flush {}
+
+.accordion.accordion-flush .accordion-item {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 19px;
+}
+
+.accordion.accordion-flush .accordion-item:last-of-type {
+    margin-bottom: 0;
+}
+
+.accordion.accordion-flush .accordion-item .accordion-header {}
+
+.accordion.accordion-flush .accordion-item .accordion-header .accordion-button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+
+.accordion.accordion-flush .accordion-item .accordion-header .accordion-button::after {
+    display: none;
+}
+
+.accordion.accordion-flush .accordion-item .accordion-header .accordion-button .icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    color: #CA2B1D;
+    background-color: #CA2B1D1A;
+    padding: 9px;
+    box-sizing: border-box;
+    margin-right: 12px;
+    position: relative;
+}
+
+.accordion.accordion-flush .accordion-item .accordion-header .accordion-button .icon::before {
+    content: "";
+    border: 1px dashed #CA2B1D;
+    height: 26px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 31px;
+}
+
+.accordion.accordion-flush .accordion-item:last-of-type .accordion-header .accordion-button .icon::before {
+    display: none;
+}
+
+.accordion.accordion-flush .accordion-item .accordion-header .accordion-button .icon::after {
+    /*     content: ""; */
+    border: 1px dashed #CA2B1D;
+    transform: rotate(90deg);
+    width: 26px;
+}
+
+.accordion.accordion-flush .accordion-item .accordion-header .accordion-button .title {
+    width: 100%;
+    height: 40px;
+    background-color: #F8F8F8;
+    border-radius: 5px;
+    color: var(--text-color-black);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 11px 15px;
+}
+
+.accordion.accordion-flush .accordion-item .accordion-header .accordion-button.collapsed {}
+
+.accordion.accordion-flush .accordion-item .accordion-header .accordion-button.collapsed .icon {}
+
+.accordion.accordion-flush .accordion-item .accordion-header .accordion-button.collapsed .title {}
+
+.accordion.accordion-flush .accordion-body {
+    padding: 20px 15px;
+    background: #F8F8F8;
+    border-radius: 13px;
+}
+
+.accordion-grid {
+    display: grid;
+    grid-template-columns: 48.8% 48.8%;
+    grid-row-gap: 11px;
+    grid-column-gap: 2.4%;
+}
+
+.accordion-grid .col-grid {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.accordion-grid .col-grid.col-grid-100 {}
+
+.accordion-grid.accordion-grid-100 {
+    grid-template-columns: 100%;
+}
+
+.accordion-grid .col-grid .modal-input-field {
+    position: relative;
+}
+
+.accordion-grid .col-grid .modal-input-field label {
+    width: 100%;
+}
+
+.accordion-grid .col-grid .modal-input-field label img {
+    position: absolute;
+    width: 17px;
+    left: 11px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.accordion-grid .col-grid .modal-input-field label input[type=text] {
+    width: 100%;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #000000b3;
+    border: none;
+    padding: 12px 15px;
+    padding-left: 39px;
+    background-color: transparent;
+}
+
+.accordion-grid .col-grid .modal-input-field.modal-input-field-checkbox {}
+
+.accordion-grid .col-grid .modal-input-field label input[type=checkbox] {
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.accordion-grid .col-grid .modal-input-field label input[type=checkbox]::after {
+    content: "No";
+    height: 23px;
+    width: 35px;
+    background: #CA2B1D;
+    border: 1px solid #c4c4c433;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: var(--text-color-white);
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 3px 9px;
+}
+
+.accordion-grid .col-grid .modal-input-field label input[type=checkbox]::before {
+    content: "Yes";
+    border-radius: 2px;
+    height: 23px;
+    width: 35px;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #00000080;
+    background: #c4c4c433;
+    position: absolute;
+    right: 42px;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 3px 7px;
+}
+
+.accordion-grid .col-grid .modal-input-field label input[type=checkbox]:checked::after {
+    content: "No";
+    border-radius: 2px;
+    color: #00000080;
+    background: #c4c4c433;
+    padding: 3px 9px;
+}
+
+.accordion-grid .col-grid .modal-input-field label input[type=checkbox]:checked::before {
+    content: "Yes";
+    background: #CA2B1D;
+    border: 1px solid #c4c4c433;
+    border-radius: 2px;
+    color: var(--text-color-white);
+    padding: 3px 7px;
+}
+
+.accordion-grid .col-grid .modal-input-field label span {
+    width: 100%;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #000000b3;
+    border: none;
+    padding: 12px 15px;
+    padding-left: 39px;
+    display: block;
 }

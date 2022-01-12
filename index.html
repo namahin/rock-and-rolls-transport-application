@@ -65,15 +65,15 @@
                                     </svg></span><span class="menu-text">Settings</span></a></li>
                                         </ul></div>
 
-                <!-- Log Out menu -->
-                <div class="side-bar-menu side-bar-log"><ul>
-                    <li><a href="#"><span class="menu-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.41748 6.29983C7.67581 3.29983 9.21748 2.07483 12.5925 2.07483H12.7008C16.4258 2.07483 17.9175 3.5665 17.9175 7.2915V12.7248C17.9175 16.4498 16.4258 17.9415 12.7008 17.9415H12.5925C9.24248 17.9415 7.70081 16.7332 7.42581 13.7832" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M1.66602 10H12.3993" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M10.5425 7.2085L13.3341 10.0002L10.5425 12.7918" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg></span><span class="menu-text">Log Out</span></a></li>
-                                        </ul></div></div></div>
-                                            <!-- page left side bar end here -->
+                        <!-- Log Out menu -->
+                        <div class="side-bar-menu side-bar-log"><ul>
+                            <li><a href="#"><span class="menu-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.41748 6.29983C7.67581 3.29983 9.21748 2.07483 12.5925 2.07483H12.7008C16.4258 2.07483 17.9175 3.5665 17.9175 7.2915V12.7248C17.9175 16.4498 16.4258 17.9415 12.7008 17.9415H12.5925C9.24248 17.9415 7.70081 16.7332 7.42581 13.7832" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M1.66602 10H12.3993" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10.5425 7.2085L13.3341 10.0002L10.5425 12.7918" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg></span><span class="menu-text">Log Out</span></a></li>
+                                                </ul></div></div></div>
+                                                    <!-- page left side bar end here -->
 
         <main class="page-area">
             <div class="container-fluid p-0">
@@ -91,7 +91,8 @@
                                 <div class="search-box">
                                     <form action="#">
                                         <label for="search"><img src="images/search-icon.svg" alt="search-icon"></label>
-                                        <input id="search" name="search" type="text" placeholder="Search here"></form>
+                                        <input id="search" name="search" type="text" placeholder="Search here">
+                                    </form>
                                 </div>
 
                                 <!-- User (admin) profile summery  -->
@@ -162,6 +163,108 @@
                                         </div>
                                     </td>
                                     <td>Stefen32</td>
+                                    <td class="td-status"><span class="status-inactive"></span>Inactive</td>
+                                    <td>
+                                        <ul class="td-action-group">
+                                            <li><button class="icon-edit" data-bs-toggle="modal" data-bs-target="#modalEditUser"><img src="images/icon/Edit.svg" alt="Edit icon"></button></li>
+                                            <li><button class="icon-delete" data-bs-toggle="modal" data-bs-target="#modalDeleteConfirmation"><img src="images/icon/Delete.svg" alt="Delete icon"></button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <div class="user-short-info">
+                                            <div class="td-user-img"><img src="images/Ghani-Pradita.png" alt="Ghani Pradita"></div>
+                                            <div class="td-user-name">Ghani Pradita</div>
+                                        </div>
+                                    </td>
+                                    <td>Ghani20</td>
+                                    <td class="td-status"><span class="status-active"></span>Active</td>
+                                    <td>
+                                        <ul class="td-action-group">
+                                            <li><button class="icon-edit" data-bs-toggle="modal" data-bs-target="#modalEditUser"><img src="images/icon/Edit.svg" alt="Edit icon"></button></li>
+                                            <li><button class="icon-delete" data-bs-toggle="modal" data-bs-target="#modalDeleteConfirmation"><img src="images/icon/Delete.svg" alt="Delete icon"></button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <div class="user-short-info">
+                                            <div class="td-user-img"><img src="images/Brennan-Burling.png" alt="Brennan Burling"></div>
+                                            <div class="td-user-name">Brennan Burling</div>
+                                        </div>
+                                    </td>
+                                    <td>Burling20</td>
+                                    <td class="td-status"><span class="status-inactive"></span>Inactive</td>
+                                    <td>
+                                        <ul class="td-action-group">
+                                            <li><button class="icon-edit" data-bs-toggle="modal" data-bs-target="#modalEditUser"><img src="images/icon/Edit.svg" alt="Edit icon"></button></li>
+                                            <li><button class="icon-delete" data-bs-toggle="modal" data-bs-target="#modalDeleteConfirmation"><img src="images/icon/Delete.svg" alt="Delete icon"></button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <div class="user-short-info">
+                                            <div class="td-user-img"><img src="images/Sophia-Hale.png" alt="Sophia Hale"></div>
+                                            <div class="td-user-name">Sophia Hale</div>
+                                        </div>
+                                    </td>
+                                    <td>Sophia40</td>
+                                    <td class="td-status"><span class="status-active"></span>Active</td>
+                                    <td>
+                                        <ul class="td-action-group">
+                                            <li><button class="icon-edit" data-bs-toggle="modal" data-bs-target="#modalEditUser"><img src="images/icon/Edit.svg" alt="Edit icon"></button></li>
+                                            <li><button class="icon-delete" data-bs-toggle="modal" data-bs-target="#modalDeleteConfirmation"><img src="images/icon/Delete.svg" alt="Delete icon"></button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <div class="user-short-info">
+                                            <div class="td-user-img"><img src="images/Aleksandar-Savic.png" alt="Aleksandar Savic"></div>
+                                            <div class="td-user-name">Aleksandar Savic</div>
+                                        </div>
+                                    </td>
+                                    <td>Aleksanda24</td>
+                                    <td class="td-status"><span class="status-inactive"></span>Inactive</td>
+                                    <td>
+                                        <ul class="td-action-group">
+                                            <li><button class="icon-edit" data-bs-toggle="modal" data-bs-target="#modalEditUser"><img src="images/icon/Edit.svg" alt="Edit icon"></button></li>
+                                            <li><button class="icon-delete" data-bs-toggle="modal" data-bs-target="#modalDeleteConfirmation"><img src="images/icon/Delete.svg" alt="Delete icon"></button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <div class="user-short-info">
+                                            <div class="td-user-img"><img src="images/Vladimir-Holan.png" alt="Vladimir Holan"></div>
+                                            <div class="td-user-name">Vladimir Holan</div>
+                                        </div>
+                                    </td>
+                                    <td>Vladimir20</td>
+                                    <td class="td-status"><span class="status-active"></span>Active</td>
+                                    <td>
+                                        <ul class="td-action-group">
+                                            <li><button class="icon-edit" data-bs-toggle="modal" data-bs-target="#modalEditUser"><img src="images/icon/Edit.svg" alt="Edit icon"></button></li>
+                                            <li><button class="icon-delete" data-bs-toggle="modal" data-bs-target="#modalDeleteConfirmation"><img src="images/icon/Delete.svg" alt="Delete icon"></button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <div class="user-short-info">
+                                            <div class="td-user-img"><img src="images/Paul-Rover.png" alt="Paul Rover"></div>
+                                            <div class="td-user-name">Paul Rover</div>
+                                        </div>
+                                    </td>
+                                    <td>Paul420</td>
                                     <td class="td-status"><span class="status-inactive"></span>Inactive</td>
                                     <td>
                                         <ul class="td-action-group">

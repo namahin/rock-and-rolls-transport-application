@@ -629,7 +629,7 @@ h3.table-title {
 
 /* theme modal css */
 .theme-modal-area {
-    max-width: 401px;
+    max-width: 450px;
 }
 
 .theme-modal {
@@ -651,8 +651,8 @@ h3.table-title {
 
 .field-group {
     display: grid;
-    column-gap: 10px;
-    grid-template-columns: 50% 50%;
+    column-gap: 2.5%;
+    grid-template-columns: 48.57% 48.57%;
 }
 
 .input-field {
@@ -661,7 +661,7 @@ h3.table-title {
 
 .input-field label {
     font-weight: 400;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 15px;
     margin-bottom: 8px;
     color: #000000b3;
@@ -723,12 +723,12 @@ h3.table-title {
 
 .input-field-radio label span {
     font-weight: 400;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 15px;
     color: #000000b3;
     margin-left: 14px;
     position: relative;
-    top: -2px;
+    top: 0px;
 }
 
 .modal-body form button,
@@ -770,14 +770,14 @@ h3.table-title {
 }
 
 .alert-modal .modal-body img {
-    margin-bottom: 11px;
+    margin-bottom: 13px;
     width: 79px;
 }
 
 .alert-modal .modal-body p {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 21px;
     text-align: center;
     color: #292d32b3;
     margin: 0;

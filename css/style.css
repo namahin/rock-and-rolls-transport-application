@@ -37,28 +37,28 @@
     --text-color-white: #ffffff;
     --text-color-white-active: #DC0000;
     --table-border-color: #0000000d;
-    --status-color-new: #0BAC78;
-    --status-color-pending: #F59C26;
-    --status-color-repair: #F1C40F;
-    --status-color-delivered: #5D5FEF;
-    --status-color-received: #0BAC78;
+
+    /* status color var */
+    --status-color-new: #66E5E5;
     --status-color-unpaid: #CA2B1D;
+    --status-color-pending: #3498DB;
     --status-color-no-title: #8E44AD;
-    --status-color-pending-dr: #3498DB;
-    --status-color-complete: #0BAC78;
+    --status-color-repair: #F1C40F;
     --status-color-repair-quote: #F59C26;
     --status-color-transit: #5D5FEF;
     --status-color-unreachable: #2C3E50;
+    --status-color-complete: #0BAC78;
+
+    /* status bg color var */
+    --status-bg-color-new: #66E5E51A;
     --status-bg-color-unpaid: #ca2b1d1f;
+    --status-bg-color-pending: #3498db1f;
     --status-bg-color-no-title: #8e44ad33;
-    --status-bg-color-pending-dr: #3498db1f;
-    --status-bg-color-new: #22C38F1A;
-    --status-bg-color-pending: #FEFBE7;
     --status-bg-color-repair: #f1c40f33;
-    --status-bg-color-delivered: #5D5FEF1A;
-    --status-bg-color-received: #0BAC781A;
-
-
+    --status-bg-color-repair-quote: #F59C261A;
+    --status-bg-color-transit: #5D5FEF1A;
+    --status-bg-color-unreachable: #2C3E501A;
+    --status-bg-color-complete: #0BAC781A;
 }
 
 ::placeholder {
@@ -594,13 +594,13 @@ h3.table-title {
 }
 
 .td-status-intakes span.status-delivered {
-    color: var(--status-color-delivered);
-    background-color: var(--status-bg-color-delivered);
+    color: var(--status-color-transit);
+    background-color: var(--status-bg-color-transit);
 }
 
 .td-status-intakes span.status-received {
-    color: var(--status-color-received);
-    background-color: var(--status-bg-color-received);
+    color: var(--status-color-complete);
+    background-color: var(--status-bg-color-complete);
 }
 
 /* theme modal css */
@@ -1045,12 +1045,12 @@ h3.table-title {
 }
 
 .driver-details-modal .modal-body .modal-sec.modal-sec-vehicle span.status-pending-dr {
-    color: var(--status-color-pending-dr);
-    background-color: var(--status-bg-color-pending-dr);
+    color: var(--status-color-pending);
+    background-color: var(--status-bg-color-pending);
 }
 
 .driver-details-modal .modal-body .modal-sec.modal-sec-vehicle span.status-pending-dr::before {
-    background-color: var(--status-color-pending-dr);
+    background-color: var(--status-color-pending);
 }
 
 .driver-details-modal .modal-body .modal-sec.modal-sec-vehicle span.status-repair {
@@ -1116,8 +1116,8 @@ h3.table-title {
 }
 
 .driver-details-modal .status-list li label .staus-pending-dr[type=radio]:checked::after {
-    background: var(--status-color-pending-dr);
-    box-shadow: 0 0 0 1px var(--status-color-pending-dr);
+    background: var(--status-color-pending);
+    box-shadow: 0 0 0 1px var(--status-color-pending);
 }
 
 .driver-details-modal .status-list li label .staus-repair[type=radio]:checked::after {
@@ -1167,7 +1167,7 @@ h3.table-title {
 }
 
 .driver-details-modal .status-list li label .staus-pending-dr[type=radio]:checked+span {
-    color: var(--status-color-pending-dr);
+    color: var(--status-color-pending);
 }
 
 .driver-details-modal .status-list li label .staus-repair[type=radio]:checked+span {

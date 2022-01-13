@@ -1282,7 +1282,7 @@ ul.edit-modal-btngroup li a.active {
 
 .car-details-modal .modal-header {
     padding: 0;
-    height: 91px;
+    height: 65px;
     box-sizing: border-box;
     position: relative;
     overflow: unset;
@@ -1299,16 +1299,30 @@ ul.edit-modal-btngroup li a.active {
     border-radius: 50%;
     padding-top: 20px;
     text-align: center;
-    bottom: -60px;
+    bottom: -84px;
     height: 220px;
 }
 
 .car-details-modal .modal-header .modal-logo::before {
     content: "";
+    position: absolute;
+    height: 100px;
+    width: 50px;
+    background-color: var(--color-white);
+    border-radius: 26%;
+    left: 0;
+    transform: rotate(50deg);
 }
 
 .car-details-modal .modal-header .modal-logo::after {
     content: "";
+    position: absolute;
+    height: 100px;
+    width: 50px;
+    background-color: var(--color-white);
+    border-radius: 26%;
+    right: 0;
+    transform: rotate(-50deg);
 }
 
 .car-details-modal .modal-header .modal-logo img {
@@ -1316,10 +1330,16 @@ ul.edit-modal-btngroup li a.active {
 }
 
 .car-details-modal .modal-body {
+    overflow: hidden;
     padding: 25px;
+    padding-right: 10px;
 }
 
-.accordion.accordion-flush {}
+.accordion.accordion-flush {
+    overflow-x: hidden;
+    max-height: 550px;
+    padding-right: 15px;
+}
 
 .accordion.accordion-flush .accordion-item {
     background-color: transparent;

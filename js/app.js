@@ -18,3 +18,31 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+
+
+// All Checkbox
+
+$(function () {
+
+    // Header All Checkbox Event
+    $("#allCheck").on("click", function () {
+        if ($("input:checkbox").prop("checked")) {
+            $("input:checkbox[name='row-check']").prop("checked", true);
+        } else {
+            $("input:checkbox[name='row-check']").prop("checked", false);
+        }
+    });
+
+    // Check event on each table row checkbox
+    $("input:checkbox[name='row-check']").on("change", function () {
+        var total_check_boxes = $("input:checkbox[name='row-check']").length;
+        var total_checked_boxes = $("input:checkbox[name='row-check']:checked").length;
+
+        // If all checked manually then check master checkbox
+        if (total_check_boxes === total_checked_boxes) {
+            $("#allCheck").prop("checked", true);
+        } else {
+            $("#allCheck").prop("checked", false);
+        }
+    });
+});

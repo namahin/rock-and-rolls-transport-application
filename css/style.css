@@ -388,6 +388,11 @@ h3.table-title {
     padding: 25px 10px;
 }
 
+.ud-table table thead tr th input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+}
+
 .ud-table table thead tr th:first-child {
     padding-left: 20px;
     width: 50px;
@@ -418,6 +423,11 @@ h3.table-title {
     font-size: 16px;
     line-height: 24px;
     color: var(--text-color);
+}
+
+.ud-table table tbody tr td input[type=checkbox] {
+    width: 15px;
+    height: 15px;
 }
 
 .ud-table table tbody tr td:first-child {
@@ -1351,8 +1361,6 @@ ul.edit-modal-btngroup li a.active {
     margin-bottom: 0;
 }
 
-.accordion.accordion-flush .accordion-item .accordion-header {}
-
 .accordion.accordion-flush .accordion-item .accordion-header .accordion-button {
     padding: 0;
     border: 0;
@@ -1445,8 +1453,6 @@ ul.edit-modal-btngroup li a.active {
     border-radius: 5px;
 }
 
-.accordion-grid .col-grid.col-grid-100 {}
-
 .accordion-grid.accordion-grid-100 {
     grid-template-columns: 100%;
 }
@@ -1479,8 +1485,6 @@ ul.edit-modal-btngroup li a.active {
     background-color: transparent;
 }
 
-.accordion-grid .col-grid .modal-input-field.modal-input-field-select {}
-
 .accordion-grid .col-grid .modal-input-field.modal-input-field-select select {
     position: absolute;
     right: 7px;
@@ -1495,8 +1499,6 @@ ul.edit-modal-btngroup li a.active {
     text-align: center;
     height: 25px;
 }
-
-.accordion-grid .col-grid .modal-input-field.modal-input-field-select select option {}
 
 .accordion-grid .col-grid .modal-input-field.checkbox-btn label input[type=checkbox] {
     position: absolute;
@@ -1569,10 +1571,6 @@ ul.edit-modal-btngroup li a.active {
     padding-left: 39px;
     display: block;
 }
-
-.accordion-grid .col-grid .modal-input-field.checkbox {}
-
-.accordion-grid .col-grid .modal-input-field.checkbox label {}
 
 .accordion-grid .col-grid .modal-input-field.checkbox label i {
     width: 12px;
@@ -1717,10 +1715,6 @@ ul.edit-modal-btngroup li a.active {
     margin-bottom: 9px;
 }
 
-.img-placeholder-expand label h4 {}
-
-.img-placeholder-expand label p {}
-
 .uploading-progress {
     display: flex;
     justify-content: space-between;
@@ -1783,8 +1777,6 @@ ul.edit-modal-btngroup li a.active {
     margin-top: 11px;
 }
 
-.ui-slider .owl-theme {}
-
 .ui-slider .owl-theme .item {
     width: 53px;
     height: 52px;
@@ -1794,8 +1786,6 @@ ul.edit-modal-btngroup li a.active {
     background-position: center center;
     background-size: cover;
 }
-
-.ui-slider-nav {}
 
 .ui-slider-nav button {
     height: 18px;
@@ -1829,7 +1819,6 @@ ul.edit-modal-btngroup li a.active {
     padding: 10px 16px 15px 16px;
 }
 
-.note-profile {}
 
 .note-profile .user-id {
     display: flex;
@@ -1845,8 +1834,6 @@ ul.edit-modal-btngroup li a.active {
 .note-profile-pic img {
     width: 25px;
 }
-
-.note-profile-info {}
 
 .note-profile-info h4 {
     font-size: 14px;

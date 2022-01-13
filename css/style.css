@@ -1899,6 +1899,7 @@ form.post-note button {
     /* overflow: hidden; */
     height: 100vh;
     background-color: #F9F9F9;
+    overflow: hidden;
 }
 
 .login-page .page-wrapper {
@@ -1921,6 +1922,11 @@ form.post-note button {
     right: 0;
     bottom: 0;
     background: #000000bf;
+}
+
+.login-wrapper {
+    overflow-x: auto;
+    padding: 0;
 }
 
 .login-container {

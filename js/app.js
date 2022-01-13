@@ -8,13 +8,13 @@ $('.owl-carousel').owlCarousel({
     navContainerClass: "ui-slider-nav",
     responsive: {
         0: {
-            items: 4
+            items: 3
         },
         600: {
-            items: 5
+            items: 4
         },
         1000: {
-            items: 5
+            items: 4
         }
     }
 })

@@ -1,7 +1,7 @@
 // Uploaded image slider
 $('.owl-carousel').owlCarousel({
     loop: false,
-    margin: 14,
+    margin: 10,
     nav: true,
     dots: false,
     navText: ['<img src="images/arrow-left.svg">', '<img src="images/arrow-right.svg">'],

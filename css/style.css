@@ -239,9 +239,14 @@ button {
     margin-right: 11px;
 }
 
-.side-bar-menu ul li a span.menu-icon svg path {
-    stroke: var(--color-white);
-    stroke-width: 1px;
+.side-bar-menu ul li a span.menu-icon img {
+    filter: saturate(0) brightness(10000%);
+    transition: linear .2s;
+}
+
+.side-bar-menu ul li a.active span.menu-icon img,
+.side-bar-menu ul li a:hover span.menu-icon img {
+    filter: none;
     transition: linear .2s;
 }
 
@@ -252,15 +257,8 @@ button {
     transform: translate(0, -50%);
 }
 
-.side-bar-menu ul li a span.menu-arrow svg path {
+.side-bar-menu ul li a span.menu-arrow img {
     stroke: var(--color-white);
-}
-
-.side-bar-menu ul li a.active span.menu-icon svg path,
-.side-bar-menu ul li a.active span.menu-arrow svg path,
-.side-bar-menu ul li a:hover span.menu-icon svg path,
-.side-bar-menu ul li a:hover span.menu-arrow svg path {
-    stroke: var(--color-white-active);
 }
 
 
@@ -1394,7 +1392,7 @@ ul.edit-modal-btngroup li a.active {
 
 .accordion.accordion-flush .accordion-item .accordion-header .accordion-button .icon {
     height: 30px;
-    width: 30px;
+    width: 31px;
     border-radius: 20px;
     font-weight: 500;
     font-size: 10px;
@@ -1409,24 +1407,40 @@ ul.edit-modal-btngroup li a.active {
 
 .accordion.accordion-flush .accordion-item .accordion-header .accordion-button .icon::before {
     content: "";
-    border: 1px dashed #CA2B1D;
+    background-image: url(../images/ba-line.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
     height: 26px;
+    width: 1px;
     display: block;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
     top: 31px;
+    opacity: .5;
 }
 
-.accordion.accordion-flush .accordion-item:last-of-type .accordion-header .accordion-button .icon::before {
-    display: none;
-}
 
 .accordion.accordion-flush .accordion-item .accordion-header .accordion-button .icon::after {
-    /*     content: ""; */
-    border: 1px dashed #CA2B1D;
-    transform: rotate(90deg);
-    width: 26px;
+    content: "";
+    background-image: url(../images/ba-line.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    height: 26px;
+    width: 1px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 31px;
+    opacity: .5;
+}
+
+.accordion.accordion-flush .accordion-item:last-of-type .accordion-header .accordion-button .icon::before,
+.accordion.accordion-flush .accordion-item:first-of-type .accordion-header .accordion-button .icon::after {
+    display: none;
 }
 
 .accordion.accordion-flush .accordion-item .accordion-header .accordion-button.collapsed .title {
@@ -1797,13 +1811,14 @@ ul.edit-modal-btngroup li a.active {
 }
 
 .ui-slider .owl-theme .item {
-    width: 53px;
-    height: 52px;
+    width: 100%;
+    height: 65px;
     border: 1px solid #ECECEC;
     border-radius: 5px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    position: relative;
 }
 
 .ui-slider-nav button {
@@ -1832,6 +1847,45 @@ ul.edit-modal-btngroup li a.active {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%)
+}
+
+.ui-slider .more-btn {
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    background-color: #EBEBEB;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    right: 2px;
+    top: 1px;
+    display: none;
+    transition: linear .2s;
+    cursor: pointer;
+}
+
+.ui-slider .owl-theme .item:hover .more-btn {
+    display: block;
+    transition: linear .2s;
+}
+
+.ui-slider .drop-list {
+    display: none;
+    margin-top: 20px;
+    background: #00000080;
+}
+
+.ui-slider .more-btn:focus+.drop-list {
+    display: block;
+}
+
+.ui-slider .drop-list a {
+    display: block;
+    color: #ffffff;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 3px 5px;
+    text-align: right;
 }
 
 .notes-area-modal {
@@ -1986,8 +2040,6 @@ form.post-note button {
     color: #00000080;
     margin-bottom: 30px;
 }
-
-.login-container form {}
 
 .login-container form label {
     font-weight: 400;

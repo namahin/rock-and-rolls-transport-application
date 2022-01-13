@@ -191,7 +191,7 @@ a {
     position: absolute;
     left: 0px;
     right: 0;
-    bottom: 280px;
+    bottom: 97px;
 }
 
 .side-bar-menu ul {
@@ -479,10 +479,30 @@ h3.table-title {
 
 .td-action-group li button.icon-edit {
     background: #bdbdbd1a;
+    transition: linear .2s;
+}
+
+.td-action-group li button.icon-edit:hover {
+    background: #949494;
+    transition: linear .2s;
+}
+
+.td-action-group li button.icon-edit:hover * {
+    filter: brightness(2);
+    transition: linear .2s;
 }
 
 .td-action-group li button.icon-delete {
     background: #FFF5F4;
+}
+
+.td-action-group li button.icon-delete:hover {
+    background-color: var(--color-primary);
+}
+
+.td-action-group li button.icon-delete:hover img {
+    filter: brightness(20);
+    transition: linear .2s
 }
 
 .td-action-group li button img {

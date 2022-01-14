@@ -592,7 +592,7 @@ h3.table-title {
 }
 
 .td-status-intakes span {
-    width: 90px;
+    width: 110px;
     padding: 5px;
     box-sizing: border-box;
     border-radius: 2px;
@@ -647,7 +647,6 @@ h3.table-title {
 .td-status-intakes span.status-unreachable {
     color: var(--status-color-unreachable);
     background-color: var(--status-bg-color-unreachable);
-    width: auto;
 }
 
 

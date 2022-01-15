@@ -165,8 +165,13 @@ table thead tr th:hover .sorting-arrow {
     user-select: none;
 }
 
+.modal {
+    z-index: 100;
+}
+
 .modal-backdrop {
     background-color: #000000d4;
+    z-index: 95;
 }
 
 .modal-backdrop.show {
@@ -1727,14 +1732,16 @@ ul.edit-modal-btngroup li a.active {
 }
 
 
-.accordion-grid .col-grid .modal-input-field.checkbox label input[type=radio] {
+.accordion-grid .col-grid .modal-input-field.checkbox label input[type=radio],
+.checkbox-complete input[type=radio] {
     position: absolute;
     right: 12px;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(0,-50%);
 }
 
-.accordion-grid .col-grid .modal-input-field.checkbox label input[type=radio]::after {
+.accordion-grid .col-grid .modal-input-field.checkbox label input[type=radio]::after,
+.checkbox-complete input[type=radio]::after {
     content: "";
     position: absolute;
     right: 0;
@@ -1748,7 +1755,8 @@ ul.edit-modal-btngroup li a.active {
     display: inline-block;
 }
 
-.accordion-grid .col-grid .modal-input-field.checkbox label input[type=radio]:checked::after {
+.accordion-grid .col-grid .modal-input-field.checkbox label input[type=radio]:checked::after,
+.checkbox-complete input[type=radio]:checked::after {
     background-image: url(../images/check.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1756,13 +1764,16 @@ ul.edit-modal-btngroup li a.active {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
 }
-.accordion-grid .col-grid .modal-input-field.checkbox label input[type=radio]:checked + .placeholder-checked{
-    height: 0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border: none;
+
+.checkbox-complete {
+    position: relative;
 }
+.checkbox-complete input[type=radio]{
+    transform: none;
+    top: 15px;
+}
+
+
 .accordion-grid .col-grid .modal-input-field.checkbox label span {
     padding-left: 43px;
 }
@@ -1784,6 +1795,8 @@ ul.edit-modal-btngroup li a.active {
     padding-left: 42px;
     position: relative;
 }
+.img-placeholder.placeholder-checked{height: 0;margin: 0;border-color: transparent;overflow: hidden;transition: linear .2s;padding-top: 0;opacity: 0;}
+.checkbox-complete input[type=radio]:checked+.placeholder-checked {border-top: 1px solid #0000000d;margin: 10px 13px;margin-top: 0;height: 83px;transition: linear .2s;padding-top: 13px;opacity: 1;}
 
 .img-placeholder img {
     width: 18px;
@@ -1972,10 +1985,20 @@ ul.edit-modal-btngroup li a.active {
     text-align: right;
 }
 
-.notes-area-modal {
-    padding: 10px 16px 15px 16px;
+.ui-slider .item .full-image {
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
+.notes-area-modal {
+    padding: 10px 6px 15px 16px;
+}
+
+.notes-view-scroll {
+    max-height: 276px;
+    overflow-y: auto;
+}
 
 .note-profile .user-id {
     display: flex;
@@ -2018,11 +2041,12 @@ ul.edit-modal-btngroup li a.active {
     margin: 0;
 }
 
-form.post-note {
+.post-note {
     position: relative;
+    padding-right: 10px;
 }
 
-form.post-note textarea {
+.post-note textarea {
     width: 100%;
     background: #FDFDFD;
     box-sizing: border-box;
@@ -2035,7 +2059,7 @@ form.post-note textarea {
     border-radius: 5px;
 }
 
-form.post-note button {
+.post-note button {
     font-size: 12px;
     padding: 7px 11px;
     width: max-content;
@@ -2218,7 +2242,7 @@ form.post-note button {
     font-size: 24px;
 }
 
-.input-box-otp input:focus{
+.input-box-otp input:focus {
     border-color: var(--color-primary);
 }
 
@@ -2328,13 +2352,17 @@ form.post-note button {
     width: 100%;
 }
 
-.pphoto-modal-footer ul li:first-of-type button {
+.pphoto-modal-footer ul li:last-of-type button {
     background-color: #CA2B1D1A;
     color: var(--color-primary);
 }
 
-.car-details-modal-footer{padding: 18px 25px 21px;border-top: 1px solid #00000014;}
-.car-details-modal-footer ul{
+.car-details-modal-footer {
+    padding: 18px 25px 21px;
+    border-top: 1px solid #00000014;
+}
+
+.car-details-modal-footer ul {
     grid-template-columns: 100%;
     grid-row-gap: 15px;
     grid-column-gap: 15px;

@@ -21,7 +21,6 @@ $('.owl-carousel').owlCarousel({
 
 
 // All Checkbox
-
 $(function () {
 
     // Header All Checkbox Event

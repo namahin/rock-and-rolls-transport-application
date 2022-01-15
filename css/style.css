@@ -2212,6 +2212,10 @@ form.post-note button {
     font-size: 24px;
 }
 
+.input-box-otp input:focus{
+    border-color: var(--color-primary);
+}
+
 .input-box-otp input:last-of-type {
     margin-right: 0;
 }

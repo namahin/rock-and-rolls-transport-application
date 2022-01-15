@@ -98,6 +98,55 @@ button {
     user-select: none;
 }
 
+table thead tr th span.sorting-arrow {
+    width: 12px;
+    height: 17px;
+    display: inline-block;
+    position: relative;
+    margin-left: 6px;
+    margin-right: -6px;
+    opacity: 0;
+}
+
+
+table thead tr th span.sorting-arrow .up {
+    background-image: url(../images/icon/polygon-1.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    height: 11px;
+    width: 11px;
+    display: block;
+    transition: linear .2s;
+    opacity: .6;
+    cursor: pointer;
+}
+
+table thead tr th span.sorting-arrow .down {
+    background-image: url(../images/icon/polygon-2.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    height: 11px;
+    width: 11px;
+    display: block;
+    transition: linear .2s;
+    opacity: .6;
+    cursor: pointer;
+}
+
+table thead tr th span.sorting-arrow .up:hover,
+table thead tr th span.sorting-arrow .down:hover,
+table thead tr th span.sorting-arrow .up:focus,
+table thead tr th span.sorting-arrow .down:focus {
+    opacity: 1;
+}
+
+table thead tr th:hover .sorting-arrow {
+    opacity: 1;
+    transition: linear .2s;
+}
+
 .btn-theme {
     font-weight: 400;
     font-size: 14px;
@@ -319,6 +368,13 @@ button {
     padding-left: 15px;
 }
 
+.page-area header .user-summery .user-img {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: linear .2s;
+}
+
 .page-area header .user-summery .user-img img {
     border: 2px solid var(--color-white);
     border-radius: 4px;
@@ -343,6 +399,27 @@ button {
     line-height: 11px;
     color: #6C6865;
     margin: 0;
+}
+
+.page-area header .user-summery .user-img i.icon-edit {
+    background-image: url(../images/icon/edit-3.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #0000004d;
+    transition: linear .2s;
+    display: none;
+    cursor: pointer;
+}
+
+.page-area header .user-summery .user-img:hover .icon-edit {
+    display: block;
+    transition: linear .2s;
 }
 
 /* user data table sec css */
@@ -429,6 +506,7 @@ h3.table-title {
 
 .ud-table table tbody tr td:first-child {
     padding-left: 20px;
+    width: 320px;
 }
 
 .ud-table table tbody tr td:last-child {
@@ -1325,7 +1403,7 @@ ul.edit-modal-btngroup li a.active {
     border-radius: 50%;
     padding-top: 20px;
     text-align: center;
-    bottom: -84px;
+    bottom: -86px;
     height: 220px;
 }
 
@@ -1363,8 +1441,9 @@ ul.edit-modal-btngroup li a.active {
 
 .accordion.accordion-flush {
     overflow-x: hidden;
-    max-height: 550px;
+    max-height: 445px;
     padding-right: 15px;
+    padding-bottom: 40px;
 }
 
 .accordion.accordion-flush .accordion-item {
@@ -1948,7 +2027,6 @@ form.post-note textarea {
     padding: 8px 10px;
     border: 1px solid #292d3233;
     border-radius: 5px;
-    padding-right: 95px;
 }
 
 form.post-note button {
@@ -2156,4 +2234,98 @@ form.post-note button {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.pphoto-modal-area {
+    max-width: 486px;
+}
+
+.pphoto-modal-area .pphoto-modal {
+    border-radius: 10px;
+}
+
+.pphoto-modal-area .pphoto-modal-header {
+    border-bottom: 1px solid #0000001a
+}
+
+.pphoto-modal-area .pphoto-modal-header h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0;
+    color: var(--color-black);
+    padding: 17px 37PX 24PX;
+}
+
+.pphoto-modal-area .modal-body {
+    padding: 23px 33px 27px;
+    text-align: center;
+}
+
+.pphoto-modal-area .modal-body .pphoto-placeholder {
+    background: #dc00000d;
+    border-radius: 5px;
+    padding: 30px;
+    padding-bottom: 43px;
+    border: 1px dashed #dc000080;
+    width: 100%;
+    display: block;
+}
+
+.pphoto-modal-area .modal-body .pphoto-placeholder img {
+    width: 49px;
+    margin-bottom: 16px;
+}
+
+.pphoto-modal-area .modal-body .pphoto-placeholder h4 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #292d32e6;
+    margin-bottom: 6px;
+}
+
+.pphoto-modal-area .modal-body .pphoto-placeholder p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #292d3266;
+}
+
+.pphoto-modal-footer {
+    padding: 0 33px 28px;
+}
+
+.pphoto-modal-footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 46.5% 46.5%;
+    grid-column-gap: 7%;
+}
+
+
+.pphoto-modal-footer ul li button {
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-white);
+    padding: 13px;
+    background-color: var(--color-primary);
+    display: block;
+    width: 100%;
+}
+
+.pphoto-modal-footer ul li:first-of-type button {
+    background-color: #CA2B1D1A;
+    color: var(--color-primary);
+}
+
+.car-details-modal-footer{padding: 18px 25px 21px;border-top: 1px solid #00000014;}
+.car-details-modal-footer ul{
+    grid-template-columns: 100%;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
 }

@@ -102,12 +102,12 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th class="w-auto">Record ID</th>
-                                    <th>Date of Intake</th>
-                                    <th>Driver Name</th>
-                                    <th>Customer Name</th>
-                                    <th class="text-center">Num. of Vehicles</th>
-                                    <th class="text-center">Overall Status</th>
+                                    <th class="w-auto">Record ID <span class="sorting-arrow"><span class="up"></span><span class="down"></span></span></th>
+                                    <th>Date of Intake <span class="sorting-arrow"><span class="up"></span><span class="down"></span></span></th>
+                                    <th>Driver Name <span class="sorting-arrow"><span class="up"></span><span class="down"></span></span></th>
+                                    <th>Customer Name <span class="sorting-arrow"><span class="up"></span><span class="down"></span></span></th>
+                                    <th class="text-center">Num. of Vehicles <span class="sorting-arrow"><span class="up"></span><span class="down"></span></span></th>
+                                    <th class="text-center">Overall Status <span class="sorting-arrow"><span class="up"></span><span class="down"></span></span></th>
                                 </tr>
                             </thead>
 
@@ -249,7 +249,7 @@
                             <div class="col-grid">
                                 <div class="driver-profile">
                                     <div class="driver-profile-pic">
-                                        <img src="images/super-admin.png" alt="">
+                                        <img src="images/s.png" alt="">
                                     </div>
                                     <div class="driver-profile-summery">
                                         <h4>Xavier Alex</h4>
@@ -275,7 +275,7 @@
                             <div class="col-grid">
                                 <div class="driver-profile">
                                     <div class="driver-profile-pic">
-                                        <img src="images/Jhon-Smith.png" alt="Jhon Smith">
+                                        <img src="images/j.png" alt="Jhon Smith">
                                     </div>
                                     <div class="driver-profile-summery">
                                         <h4>Jhon Smith</h4>
@@ -384,22 +384,14 @@
                         <h4 class="modal-sec-title">Status</h4>
                         <div class="modal-sec">
                             <ul class="status-list">
-                                <li><label for=""><input class="staus-complete" id="" type="radio"
-                                            name="statusList"><span>Complete</span></label></li>
-                                <li><label for=""><input class="staus-unpaid" id="" type="radio"
-                                            name="statusList"><span>Unpaid</span></label></li>
-                                <li><label for=""><input class="staus-no-title" id="" type="radio"
-                                            name="statusList"><span>No Title</span></label></li>
-                                <li><label for=""><input class="staus-pending" id="" type="radio"
-                                            name="statusList"><span>Pending DR</span></label></li>
-                                <li><label for=""><input class="staus-repair" id="" type="radio"
-                                            name="statusList"><span>Repair</span></label></li>
-                                <li><label for=""><input class="staus-repair-quote" id="" type="radio"
-                                            name="statusList"><span>Repair Quote</span></label></li>
-                                <li><label for=""><input class="staus-transit" id="" type="radio"
-                                            name="statusList"><span>Transit</span></label></li>
-                                <li><label for=""><input class="staus-unreachable" id="" type="radio"
-                                            name="statusList"><span>Unreachable</span></label></li>
+                                <li><label for=""><input class="staus-unpaid" id="" type="radio" name="statusList" checked><span>Unpaid</span></label></li>
+                                <li><label for=""><input class="staus-no-title" id="" type="radio" name="statusList"><span>No Title</span></label></li>
+                                <li><label for=""><input class="staus-pending" id="" type="radio" name="statusList"><span>Pending DR</span></label></li>
+                                <li><label for=""><input class="staus-repair" id="" type="radio" name="statusList"><span>Repair</span></label></li>
+                                <li><label for=""><input class="staus-repair-quote" id="" type="radio" name="statusList"><span>Repair Quote</span></label></li>
+                                <li><label for=""><input class="staus-transit" id="" type="radio" name="statusList"><span>Transit</span></label></li>
+                                <li><label for=""><input class="staus-unreachable" id="" type="radio" name="statusList"><span>Unreachable</span></label></li>
+                                <li><label for=""><input class="staus-complete" id="" type="radio" name="statusList"><span>Complete</span></label></li>
                             </ul>
                         </div>
 
@@ -528,7 +520,7 @@
 
 
     <!-- Edit car details modal -->
-    <div class="modal fade" id="modalCarEdit" tabindex="-1" aria-labelledby="modalCarEditleLabel" aria-hidden="true">
+    <div class="modal fade" id="modalCarEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalCarEditleLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable car-details-modal-area">
             <div class="modal-content car-details-modal">
                 <div class="modal-header">
@@ -537,8 +529,6 @@
                     </div>
                 </div>
                 <div class="modal-body">
-
-
                     <div class="accordion accordion-flush" id="accordionCarDetails">
 
                         <!-- 01 Vehicle Summary -->
@@ -1073,7 +1063,6 @@
                                                 <!--  -->
                                                 <form class="post-note" action="#">
                                                     <textarea rows="3" placeholder="Add Note..."></textarea>
-                                                    <button type="submit">Save Note</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -1082,6 +1071,12 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="pphoto-modal-footer car-details-modal-footer">
+                    <ul>
+                        <li><button class="btn-theme" type="button" data-bs-dismiss="modal">Cancel</button></li>
+                        <li><button class="btn-theme" type="submit">Save</button></li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -88,7 +88,10 @@
 
                                 <!-- User (admin) profile summery  -->
                                 <div class="user-summery">
-                                    <div class="user-img"><img src="images/super-admin.png" alt=""></div>
+                                    <div class="user-img">
+                                        <img src="images/super-admin.png" alt="Admin">
+                                        <i class="icon-edit" data-bs-toggle="modal" data-bs-target="#modalUpdateProfilePhoto"></i>
+                                    </div>
                                     <div class="user-id">
                                         <h3>Jhon Smith</h3>
                                         <p>Super Admin</p>
@@ -108,8 +111,7 @@
                                 <h3 class="table-title">All Users</h3>
                             </div>
                             <div class="col-md-6 text-end">
-                                <button class="btn-theme" type="button" data-bs-toggle="modal"
-                                    data-bs-target="#modalAddUser">Add User</button>
+                                <button class="btn-theme" type="button" data-bs-toggle="modal" data-bs-target="#modalAddUser">Add User</button>
                             </div>
                         </div>
                     </div>
@@ -119,7 +121,6 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th></th>
                                     <th>Fast & Last Name</th>
                                     <th>User name</th>
                                     <th>Status</th>
@@ -129,7 +130,6 @@
 
                             <tbody>
                                 <tr>
-                                    <td><input type="checkbox" id="" name="row-check"></td>
                                     <td>
                                         <div class="user-short-info">
                                             <div class="td-user-img"><img src="images/super-admin.png" alt="Jhon Smith"></div>
@@ -146,7 +146,6 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" id="" name="row-check"></td>
                                     <td>
                                         <div class="user-short-info">
                                             <div class="td-user-img"><img src="images/Stefen-Hoking.png" alt="Jhon Smith"></div>
@@ -163,7 +162,6 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" id="" name="row-check"></td>
                                     <td>
                                         <div class="user-short-info">
                                             <div class="td-user-img"><img src="images/Ghani-Pradita.png" alt="Ghani Pradita"></div>
@@ -180,7 +178,6 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" id="" name="row-check"></td>
                                     <td>
                                         <div class="user-short-info">
                                             <div class="td-user-img"><img src="images/Brennan-Burling.png" alt="Brennan Burling"></div>
@@ -197,7 +194,6 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" id="" name="row-check"></td>
                                     <td>
                                         <div class="user-short-info">
                                             <div class="td-user-img"><img src="images/Sophia-Hale.png" alt="Sophia Hale"></div>
@@ -214,7 +210,6 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" id="" name="row-check"></td>
                                     <td>
                                         <div class="user-short-info">
                                             <div class="td-user-img"><img src="images/Aleksandar-Savic.png" alt="Aleksandar Savic"></div>
@@ -231,7 +226,6 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" id="" name="row-check"></td>
                                     <td>
                                         <div class="user-short-info">
                                             <div class="td-user-img"><img src="images/Vladimir-Holan.png" alt="Vladimir Holan"></div>
@@ -248,7 +242,6 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" id="" name="row-check"></td>
                                     <td>
                                         <div class="user-short-info">
                                             <div class="td-user-img"><img src="images/Paul-Rover.png" alt="Paul Rover"></div>
@@ -429,6 +422,34 @@
                         <li><a class="active" href="#" type="button" data-bs-dismiss="modal">Yes</a></li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Update Profile Photo Modal #modalUpdateProfilePhoto -->
+    <div class="modal fade" id="modalUpdateProfilePhoto" tabindex="-1" aria-labelledby="modalUpdateProfilePhotoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable pphoto-modal-area">
+            <div class="modal-content pphoto-modal">
+                <form action="#">
+                    <div class="pphoto-modal-header">
+                        <h3>Update Profile Photo</h3>
+                    </div>
+                    <div class="modal-body">
+                        <label class="pphoto-placeholder" for="image">
+                            <input type="file" name="" id="image" hidden>
+                            <img src="images/icon/Image-line.svg" alt="">
+                            <h4>Click here to update your profile photo!</h4>
+                            <p>Only JPG, PNG and JPEG format</p>
+                        </label>
+                    </div>
+                    <div class="pphoto-modal-footer">
+                        <ul>
+                            <li><button class="btn-theme" type="button" data-bs-dismiss="modal">Cancel</button></li>
+                            <li><button class="btn-theme" type="submit">Save</button></li>
+                        </ul>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

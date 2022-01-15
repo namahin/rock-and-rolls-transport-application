@@ -1727,14 +1727,14 @@ ul.edit-modal-btngroup li a.active {
 }
 
 
-.accordion-grid .col-grid .modal-input-field.checkbox label input[type=checkbox] {
+.accordion-grid .col-grid .modal-input-field.checkbox label input[type=radio] {
     position: absolute;
     right: 12px;
     top: 50%;
     transform: translate(0, -50%);
 }
 
-.accordion-grid .col-grid .modal-input-field.checkbox label input[type=checkbox]::after {
+.accordion-grid .col-grid .modal-input-field.checkbox label input[type=radio]::after {
     content: "";
     position: absolute;
     right: 0;
@@ -1748,7 +1748,7 @@ ul.edit-modal-btngroup li a.active {
     display: inline-block;
 }
 
-.accordion-grid .col-grid .modal-input-field.checkbox label input[type=checkbox]:checked::after {
+.accordion-grid .col-grid .modal-input-field.checkbox label input[type=radio]:checked::after {
     background-image: url(../images/check.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1756,7 +1756,13 @@ ul.edit-modal-btngroup li a.active {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
 }
-
+.accordion-grid .col-grid .modal-input-field.checkbox label input[type=radio]:checked + .placeholder-checked{
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+}
 .accordion-grid .col-grid .modal-input-field.checkbox label span {
     padding-left: 43px;
 }

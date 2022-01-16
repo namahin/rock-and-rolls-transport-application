@@ -222,13 +222,12 @@ table thead tr th:hover .sorting-arrow {
 .site-logo::before {
     content: "";
     position: absolute;
-    width: 200px;
     height: 1px;
     bottom: 0;
     left: 0;
     opacity: 0.1;
     background-color: #fff;
-
+    right: 0;
 }
 
 .site-logo a {
@@ -2352,7 +2351,7 @@ ul.edit-modal-btngroup li a.active {
     width: 100%;
 }
 
-.pphoto-modal-footer ul li:last-of-type button {
+.pphoto-modal-footer ul li:first-of-type button {
     background-color: #CA2B1D1A;
     color: var(--color-primary);
 }

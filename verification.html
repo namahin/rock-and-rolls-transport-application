@@ -30,10 +30,14 @@
                         <h2>Verification</h2>
                         <p>1. A 6-digit code has been sent to your email.<br>
                             Please enter that code below</p>
-                        <form action="reset-password.html" class="digit-group" autocomplete="off" data-autosubmit="false">
+
+                        <!-- form start from here -->
+
+                        <form action="reset-password.html" class="digit-group" autocomplete="off"
+                            data-autosubmit="false">
                             <label for="otp">Enter code</label>
                             <div class="input-box-otp">
-                                <input type="text" id="d1" name="d1" data-next="d2" autofocus/>
+                                <input type="text" id="d1" name="d1" data-next="d2" autofocus />
                                 <input type="text" id="d2" name="d2" data-next="d3" data-previous="d1" />
                                 <input type="text" id="d3" name="d3" data-next="d4" data-previous="d2" />
                                 <input type="text" id="d4" name="d4" data-next="d5" data-previous="d3" />
@@ -42,6 +46,9 @@
                             </div>
                             <button class="btn-theme" type="submit">Continue</button>
                         </form>
+
+                        <!-- form end here -->
+
                         <div class="resend"><span type="button" onclick="location.reload();">Resend Code</span></div>
                     </div>
                 </div>

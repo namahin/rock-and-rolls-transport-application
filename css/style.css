@@ -178,7 +178,7 @@ table thead tr th:hover .sorting-arrow {
     opacity: 1;
 }
 
-/*  */
+/* page css start from here */
 .page-wrapper {
     display: flex;
     flex-wrap: nowrap;

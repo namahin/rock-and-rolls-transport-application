@@ -1953,7 +1953,7 @@ ul.edit-modal-btngroup li a.active {
     border: none;
     border-radius: 10px;
     position: absolute;
-    right: 2px;
+    left: 2px;
     top: 1px;
     display: none;
     transition: linear .2s;
@@ -1981,9 +1981,12 @@ ul.edit-modal-btngroup li a.active {
     font-size: 10px;
     line-height: 12px;
     padding: 3px 5px;
-    text-align: right;
+    text-align: left;
+    transition: linear .2s;
 }
-
+.ui-slider .drop-list a:hover{
+    background-color: #00000080;
+}
 .ui-slider .item .full-image {
     display: block;
     height: 100%;

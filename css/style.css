@@ -1547,6 +1547,20 @@ ul.edit-modal-btngroup li a.active {
     background-color: transparent;
 }
 
+.accordion.accordion-flush .accordion-item .accordion-header .accordion-button .title span.bell {
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--color-primary);
+    background-color: #ca2b1d1f;
+    height: 20px;
+    width: 20px;
+    border-radius: 15px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
 .accordion.accordion-flush .accordion-body {
     padding: 20px 15px;
     background: #F8F8F8;
@@ -1736,7 +1750,7 @@ ul.edit-modal-btngroup li a.active {
     position: absolute;
     right: 12px;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
 }
 
 .accordion-grid .col-grid .modal-input-field.checkbox label input[type=radio]::after,
@@ -1767,7 +1781,8 @@ ul.edit-modal-btngroup li a.active {
 .checkbox-complete {
     position: relative;
 }
-.checkbox-complete input[type=radio]{
+
+.checkbox-complete input[type=radio] {
     transform: none;
     top: 15px;
 }
@@ -1794,8 +1809,26 @@ ul.edit-modal-btngroup li a.active {
     padding-left: 42px;
     position: relative;
 }
-.img-placeholder.placeholder-checked{height: 0;margin: 0;border-color: transparent;overflow: hidden;transition: linear .2s;padding-top: 0;opacity: 0;}
-.checkbox-complete input[type=radio]:checked+.placeholder-checked {border-top: 1px solid #0000000d;margin: 10px 13px;margin-top: 0;height: 83px;transition: linear .2s;padding-top: 13px;opacity: 1;}
+
+.img-placeholder.placeholder-checked {
+    height: 0;
+    margin: 0;
+    border-color: transparent;
+    overflow: hidden;
+    transition: linear .2s;
+    padding-top: 0;
+    opacity: 0;
+}
+
+.checkbox-complete input[type=radio]:checked+.placeholder-checked {
+    border-top: 1px solid #0000000d;
+    margin: 10px 13px;
+    margin-top: 0;
+    height: 83px;
+    transition: linear .2s;
+    padding-top: 13px;
+    opacity: 1;
+}
 
 .img-placeholder img {
     width: 18px;
@@ -1984,9 +2017,11 @@ ul.edit-modal-btngroup li a.active {
     text-align: left;
     transition: linear .2s;
 }
-.ui-slider .drop-list a:hover{
+
+.ui-slider .drop-list a:hover {
     background-color: #00000080;
 }
+
 .ui-slider .item .full-image {
     display: block;
     height: 100%;
@@ -2347,16 +2382,20 @@ ul.edit-modal-btngroup li a.active {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: var(--color-white);
+    background-color: #CA2B1D1A;
+    color: var(--color-primary);
     padding: 13px;
-    background-color: var(--color-primary);
     display: block;
     width: 100%;
 }
 
-.pphoto-modal-footer ul li:first-of-type button {
-    background-color: #CA2B1D1A;
-    color: var(--color-primary);
+.pphoto-modal-footer ul li button.active {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.pphoto-modal-footer ul li button.disable {
+    color: var(--color-white);
 }
 
 .car-details-modal-footer {

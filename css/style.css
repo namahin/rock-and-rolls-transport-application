@@ -2044,6 +2044,7 @@ ul.edit-modal-btngroup li a.active {
 .ui-slider .more-btn.cancel {
     left: unset;
     right: 2px;
+    background-color: #F4D5D2;
 }
 
 .ui-slider .drop-list a {

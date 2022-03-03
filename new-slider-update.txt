@@ -1,0 +1,76 @@
+############
+    HTML
+############
+
+    <!-- Uploaded image slider -->
+    <div class="ui-slider">
+        <div class="owl-carousel owl-theme">
+            <div style="background-image: url(images/slider-img.png);"
+                class="item">
+                
+                <a href="#" class="more-btn download"><img src="images/icon/download.svg" alt="download icon"></a>
+                <a href="#" class="more-btn cancel"><img src="images/icon/cancel.svg" alt="cancel icon"></a>
+
+                <a class="full-image" data-fancybox="ownership" data-src="images/doc01.png"></a>
+            </div>
+            <div style="background-image: url(images/slider-img.png);"
+                class="item">
+
+                <a href="#" class="more-btn download"><img src="images/icon/download.svg" alt="download icon"></a>
+                <a href="#" class="more-btn cancel"><img src="images/icon/cancel.svg" alt="cancel icon"></a>
+
+                <a class="full-image" data-fancybox="ownership" data-src="images/doc01.png"></a>
+            </div>
+            <div style="background-image: url(images/doc.png);"
+                class="item">
+
+                <a href="#" class="more-btn download"><img src="images/icon/download.svg" alt="download icon"></a>
+                <a href="#" class="more-btn cancel"><img src="images/icon/cancel.svg" alt="cancel icon"></a>
+                
+            </div>
+            <div style="background-image: url(images/pdf.png);"
+                class="item">
+
+                <a href="#" class="more-btn download"><img src="images/icon/download.svg" alt="download icon"></a>
+                <a href="#" class="more-btn cancel"><img src="images/icon/cancel.svg" alt="cancel icon"></a>
+                
+            </div>
+            <div style="background-image: url(images/slider-img.png);"
+                class="item">
+                <button class="more-btn">···</button>
+
+                <a href="#" class="more-btn download"><img src="images/icon/download.svg" alt="download icon"></a>
+                <a href="#" class="more-btn cancel"><img src="images/icon/cancel.svg" alt="cancel icon"></a>
+                
+            </div>
+            <div style="background-image: url(images/slider-img.png);"
+                class="item">
+
+                <a href="#" class="more-btn download"><img src="images/icon/download.svg" alt="download icon"></a>
+                <a href="#" class="more-btn cancel"><img src="images/icon/cancel.svg" alt="cancel icon"></a>
+                
+                <a class="full-image" data-fancybox="ownership" data-src="images/doc01.png"></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+###########
+    CSS
+###########
+
+.ui-slider .more-btn img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 7px;
+}
+
+.ui-slider .more-btn.cancel {
+    left: unset;
+    right: 2px;
+}

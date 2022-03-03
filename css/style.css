@@ -98,6 +98,28 @@ button {
     user-select: none;
 }
 
+input[type=checkbox]::after {
+    content: "";
+    height: 16px;
+    width: 16px;
+    border: 1px solid var(--color-primary);
+    background: var(--color-white);
+    border-radius: 4px;
+    background-color: var(--color-white);
+    display: inline-block;
+    position: relative;
+    top: -2px;
+}
+
+input[type=checkbox]:checked::after {
+    background-image: url(../images/check.svg);
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: center center;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
 table thead tr th span.sorting-arrow {
     width: 12px;
     height: 17px;
@@ -1423,7 +1445,7 @@ ul.edit-modal-btngroup li a.active {
 }
 
 .car-details-modal .modal-header .modal-logo::after {
-    content: "";
+    /* content: ""; */
     position: absolute;
     height: 100px;
     width: 50px;
@@ -2009,6 +2031,19 @@ ul.edit-modal-btngroup li a.active {
 
 .ui-slider .more-btn:focus+.drop-list {
     display: block;
+}
+
+.ui-slider .more-btn img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+}
+
+.ui-slider .more-btn.cancel {
+    left: unset;
+    right: 2px;
 }
 
 .ui-slider .drop-list a {
